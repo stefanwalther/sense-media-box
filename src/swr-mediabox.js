@@ -15,7 +15,12 @@ define( [
 		'./initialproperties',
 		'./lib/js/extensionUtils',
 		'text!./lib/partials/qsMediaBox.ng.html',
-		'text!./lib/css/style.css'
+		'text!./lib/css/style.css',
+
+		//no return values
+		'./lib/directives/qsMbImage/qsMbImage',
+		'./lib/directives/qsMbVideo/qsMbVideo',
+		'./lib/directives/qsMbWebsite/qsMbWebsite'
 	],
 	function ( $, _, props, initProps, extensionUtils, ngTemplate, cssContent ) {
 		'use strict';
