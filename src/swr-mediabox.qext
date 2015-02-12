@@ -1,0 +1,9 @@
+{
+	"name" : "Media Box",
+	"description" : "Include web pages, videos, images and much more into your Qlik Sense app.",
+	"icon" : "extension",
+	"type" : "visualization",
+	"version": "0.1",
+	"preview" : "mediabox.png",
+	"author": "Stefan Walther"
+}
