@@ -1,0 +1,28 @@
+{
+  "name": "qsMediaBox",
+  "version": "0.1.0",
+  "authors": [
+    "Stefan Walther"
+  ],
+  "description": "Include web pages, videos, images and much more into your Qlik Sense app.",
+  "main": "-",
+  "keywords": [
+    "qliksense-visualization-extension",
+    "Qlik",
+    "Sense",
+    "Qlik",
+    "extension"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/stefanwalther/qsMediaBox",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "videojs": "~4.11.4"
+  }
+}
