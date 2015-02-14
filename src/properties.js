@@ -30,15 +30,37 @@ define( [], function () {
 	// Image
 	// ****************************************************************************************
 	var imageProps = {
+		show: function ( data ) {
+			return data.props.mbType === 'image';
+		},
 		items: {
 			imageSource: {
 				type: "string",
 				ref: "props.image.source",
 				label: "Image source (Url)",
-				expression: "optional",
-				show: function ( data ) {
-					return true;
-				}
+				expression: "optional"
+			},
+			imageHorizontalAlign: {
+				type: "string",
+				ref: "props.image.horizontalAlign",
+				component: "buttongroup",
+				label: "Horizontal align",
+				options: [
+					{
+						value: "left",
+						label: "Left"
+					},
+					{
+						value: "center",
+						label: "Center"
+					},
+					{
+						value: "right",
+						label: "Right"
+					}
+				],
+				defaultValue: "left"
+
 			}
 		}
 	};
@@ -48,15 +70,15 @@ define( [], function () {
 	// ****************************************************************************************
 
 	var videoProps = {
+		show: function ( data ) {
+			return data.props.mbType === 'video';
+		},
 		items: {
 			videoSource: {
 				type: "string",
 				ref: "props.video.source",
 				label: "Video source (Url)",
-				expression: "optional",
-				show: function ( data ) {
-					return true
-				}
+				expression: "optional"
 			}
 		}
 	};
@@ -66,6 +88,9 @@ define( [], function () {
 	// ****************************************************************************************
 
 	var websiteProps = {
+		show: function ( data ) {
+			return data.props.mbType === 'website';
+		},
 		items: {
 			settings: {
 				type: "items",
@@ -76,12 +101,10 @@ define( [], function () {
 						label: "Web site (Url):",
 						type: "string",
 						expression: "optional",
-						show: function ( data ) {
-							return true
-						}
+						defaultValue: ""
 					},
 					websiteScrollbars: {
-						ref: "props.website.scrollBars",
+						ref: "props.website.scrollBehavior",
 						label: "Scrollbars",
 						type: "string",
 						component: "dropdown",
@@ -91,21 +114,12 @@ define( [], function () {
 								label: "Auto"
 							},
 							{
-								value: "both",
-								label: "Both"
+								value: "on",
+								label: "Always on"
 							},
 							{
 								value: "none",
-								label: "None"
-							},
-
-							{
-								value: "vertical",
-								label: "Only vertical"
-							},
-							{
-								value: "horizontal",
-								label: "Only horizontal"
+								label: "Always hidden"
 							}
 						],
 						defaultValue: "none"
@@ -138,15 +152,11 @@ define( [], function () {
 
 	// Appearance Panel
 	var appearancePanel = {
-		uses: "settings"
-	};
-
-	var mediaboxPanel = {
-		type: "items",
-		component: "accordion",
+		uses: "settings",
 		items: {
-			type: {
-				label: "Behavior",
+			mbSettings: {
+				type: "items",
+				label: "Mediabox definition",
 				items: {
 					ddType: mbType,
 					imageProps: imageProps,
@@ -162,9 +172,7 @@ define( [], function () {
 		type: "items",
 		component: "accordion",
 		items: {
-			appearance: appearancePanel,
-			behaviorPanel: mediaboxPanel
-
+			appearance: appearancePanel
 		}
 	};
 

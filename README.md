@@ -1,5 +1,11 @@
-# Media Box
+# Media Box for Qlik Sense
 Include web pages, videos, images and much more into your Qlik Sense app.
+
+
+# Note, work is not finished yet ... stay tuned ...
+
+---
+---
 
 ## Purpose and Description
 
@@ -26,9 +32,13 @@ After installing the Visualization Extension and dropping it onto a sheet in Qli
 
 ### 1. Define the media type
 
-### 2. Define the source
+Depending on the selected media type you'll then see different options in the property panel:
 
-### 3. Fine-tune the layout
+#### Media type _Website_
+
+#### Media type _Image_
+
+#### Media type _Video_
 
 ## Contributing
 Contributing to this project is welcome. The process to do so is outlined below:
@@ -38,6 +48,16 @@ Contributing to this project is welcome. The process to do so is outlined below:
 3. Create a pull request (PR)
 
 I cannot guarantee that I will merge all PRs but I will evaluate them all.
+
+## Roadmap & Todos
+
+**Media type _Website_**
+- [ ] Allow the user to select the [security settings for the embedded website](http://www.w3schools.com/tags/att_iframe_sandbox.asp) (now hardcoded)
+
+**Media type _Image_**
+- [ ] Aspect ratio for the image
+
+**Media type _Video_**
 
 ## Author
 

@@ -34,7 +34,7 @@ define( [
 			snapshot: {canTakeSnapshot: true},
 			template: ngTemplate,
 			controller: ['$scope', function ( $scope ) {
-
+				console.info( 'root $scope', $scope );
 			}]
 		};
 

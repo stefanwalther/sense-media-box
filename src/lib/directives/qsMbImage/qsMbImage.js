@@ -10,8 +10,7 @@ define( [
 			restrict: "E",
 			link: function ( $scope, $element, $attrs ) {
 
-				console.info( 'qsMbImage' );
-				$element.html( 'image' );
+				$element.addClass( 'qs-mb-image-container' );
 
 				var $img = $( document.createElement( 'img' ) );
 				$img.addClass( 'qs-mb-image' );
@@ -21,6 +20,7 @@ define( [
 
 					// Source
 					$img.attr( 'src', $scope.layout.props.image.source );
+					$element.css( 'text-align', $scope.layout.props.image.horizontalAlign );
 
 					// Aspect Ratio
 
@@ -28,6 +28,7 @@ define( [
 				render();
 
 				$scope.$watchCollection( 'layout.props.image', function ( newval ) {
+					console.log( 'image: render', $scope.layout.props.image );
 					render();
 				} );
 

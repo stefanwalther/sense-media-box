@@ -10,7 +10,6 @@ define( [
 			restrict: "E",
 			link: function ( $scope, $element, $attrs ) {
 
-				console.info( 'qsMbVideo' );
 				$element.html( 'video' );
 
 			}

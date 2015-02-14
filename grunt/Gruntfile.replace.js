@@ -20,7 +20,7 @@ module.exports = function (grunt) {
             files: [
                 {
                     expand: true,
-                    flatten: true,
+                    flatten: false,
                     src: ['../dist/**/*.*','!../dist/**/*.{png,gif,jpg,ico,psd}'],
                     dest: '../dist/'}
             ]
@@ -36,7 +36,7 @@ module.exports = function (grunt) {
             files: [
                 {
                     expand: true,
-                    flatten: true,
+                    flatten: false,
                     src: ['../dist/*.*', '!../dist/**/*.{png,gif,jpg,ico,psd}'],
                     dest: '../dist/'}
             ]
@@ -52,7 +52,7 @@ module.exports = function (grunt) {
             files: [
                 {
                     expand: true,
-                    flatten: true,
+                    flatten: false,
                     src: ['../dist/**/*.*', '!../dist/**/*.{png,gif,jpg,ico,psd}'],
                     dest: '../dist/'}
             ]
