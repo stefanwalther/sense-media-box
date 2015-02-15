@@ -68,8 +68,9 @@ Any further ideas, please let me know!
 ## Author
 
 **Stefan Walther**
-* http://www.yourwebsite.com
-* http://github.com/yourname
+* [qlikblog.at](http://www.qlikblog.at)
+* [twitter/waltherstefan](http://twitter.com/waltherstefan)
+* [github.com/stefanwalther](http://github.com/stefanwalther)
 
 
 ## Change Log
