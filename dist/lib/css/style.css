@@ -1,0 +1,37 @@
+.qv-object-swr-mediabox {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.qv-object-swr-mediabox .qs-mb-website {
+  height: 100%;
+  width: calc(100% - 0px);
+  position: absolute;
+}
+.qv-object-swr-mediabox .qs-mb-website .iframePlaceHolder {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.qv-object-swr-mediabox .qs-mb-website .iframePlaceHolder > iframe {
+  width: 100%;
+  height: 100%;
+}
+.qv-object-swr-mediabox .qs-mb-website .mb_website_nointeraction_overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  cursor: not-allowed;
+}
+.qv-object-swr-mediabox .qs-mb-image-container {
+  width: 100%;
+  display: block;
+}
+.qv-object-swr-mediabox .qs-mb-video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
