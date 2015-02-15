@@ -1,6 +1,6 @@
 {
   "name": "qsmediabox",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "Include web pages, videos, images and much more into your Qlik Sense app.",
   "main": "-",
   "scripts": {
