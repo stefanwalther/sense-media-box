@@ -74,11 +74,27 @@ define( [], function () {
 			return data.props.mbType === 'video';
 		},
 		items: {
+			videoType: {
+				type: "string",
+				ref: "props.video.type",
+				component: "dropdown",
+				label: "Video type",
+				options: [
+					{
+						value: "video/mp4",
+						label: "MP4"
+					}
+				]
+
+			},
 			videoSource: {
 				type: "string",
 				ref: "props.video.source",
 				label: "Video source (Url)",
-				expression: "optional"
+				expression: "optional",
+				show: function ( data ) {
+					return data.props.video.type === 'video/mp4';
+				}
 			}
 		}
 	};

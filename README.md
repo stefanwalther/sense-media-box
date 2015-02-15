@@ -11,7 +11,7 @@ Include web pages, videos, images and much more into your Qlik Sense app.
 
 The idea of this extension is to bundle the usage of several media-types into one Visualization Extension to be used within Qlik Sense.
 
-As of now the following media types are supported:
+As of now the following media types are currently supported:
 * Video
 * Web sites
 * Images
@@ -51,13 +51,19 @@ I cannot guarantee that I will merge all PRs but I will evaluate them all.
 
 ## Roadmap & Todos
 
+The following features are planned to be implemented:
+
 **Media type _Website_**
 - [ ] Allow the user to select the [security settings for the embedded website](http://www.w3schools.com/tags/att_iframe_sandbox.asp) (now hardcoded)
 
 **Media type _Image_**
-- [ ] Aspect ratio for the image
+- [ ] Settings to control the images' aspect ratio
 
 **Media type _Video_**
+- [ ] Support for Video type _YouTube_
+- [ ] Support for Video type _Vimeo_
+
+Any further ideas, please let me know!
 
 ## Author
 

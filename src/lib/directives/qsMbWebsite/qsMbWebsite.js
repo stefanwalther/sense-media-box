@@ -48,7 +48,6 @@ define( [
 			link: function ( $scope, $element, $attrs ) {
 
 				var $ifr = $element.find( 'iframe' );
-				console.log( 'iframe', $ifr );
 
 				// Todo: Can be replaced with $watchGroup as soon as AngularJS 1.3 is in place
 				$scope.$watchCollection( '[websiteSource, websiteInteraction, websiteScrollBehavior, editMode]', function ( newVal ) {
