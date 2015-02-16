@@ -28,21 +28,6 @@ define( [
 				var $video,
 					player;
 
-				//function addVideo () {
-				//	$video = $( document.createElement( 'video' ) );
-				//	$video.attr( 'width', 400 );
-				//	$video.attr( 'height', 400 );
-				//	$video.attr( 'controls' );
-				//	$video.attr( 'data-setup', '{}' );
-				//	$video.addClass( 'video-js' );
-				//	$video.addClass( 'vjs-default-skin' );
-				//	$element.append( $video );
-				//
-				//	configVideo();
-				//
-				//};
-				//addVideo();
-
 				function configVideo () {
 
 					var options = {};
