@@ -6,7 +6,8 @@ define( [
 	'text!./videojs.min.css',
 
 	//no return value
-	'./videojs.min'
+	'./videojs.min',
+	'./plugins/vjs.vimeo.min'
 
 ], function ( qvangular, extensionUtils, ngTemplate, videojsCss ) {
 	'use strict';
@@ -21,43 +22,93 @@ define( [
 			scope: {
 				objectId: '=',
 				videoType: '=',
-				videoSource: '='
+				videoSourceMp4: '=',
+				videoSourceVimeo: '=',
+				videoPoster: '='
 			},
-			link: function ( $scope, $element, $attrs ) {
+			link: function ( $scope /*, $element, $attrs */ ) {
 
-				var $video,
-					player;
+				var player;
+
+				function getSource () {
+					console.log( 'getSource.videoType', $scope.videoType );
+					switch ( $scope.videoType ) {
+						case 'video/mp4':
+							return $scope.videoSourceMp4;
+							break;
+						//case 'vimeo':
+						//	return $scope.videoSourceVimeo;
+						//	break;
+						default:
+							return '';
+							break;
+					}
+				}
+
+				function getTechOrder () {
+					switch ( $scope.videoType ) {
+						case 'video/mp4':
+							return ["html5"];
+							break;
+						//case 'vimeo':
+						//	return ["vimeo"];
+						//	break;
+						default:
+							return ["html5"];
+							break;
+					}
+				}
 
 				function configVideo () {
 
-					var options = {};
+					var options = {
+						techOrder: getTechOrder(),
+						controls: true,
+						autoplay: false,
+						preload: 'auto',
+						poster: $scope.videoPoster
+					};
 
-					if ( !player ) {
-						player = videojs( 'myVideo', options, function () {
-							var mPlayer = this;
+					console.log( 'configVideo.options', options );
 
-							mPlayer.src( {
+					var videoSource = getSource();
+					console.log( 'videoSource', videoSource );
+
+					if ( videoSource ) {
+						// Todo: Check if we can optimize this, silly duplicated code
+						if ( !player ) {
+
+							// Initialization
+							player = videojs( 'myVideo', options, function () {
+								var mPlayer = this;
+
+								mPlayer.src( {
+										type: $scope.videoType,
+										src: getSource()
+									}
+								);
+							} );
+						} else {
+
+							// Update
+							player.src(
+								{
 									type: $scope.videoType,
-									src: $scope.videoSource
+									src: getSource()
 								}
-							);
-						} );
-					} else {
-						player.src(
-							{
-								type: $scope.videoType,
-								src: $scope.videoSource
-							}
-						)
+							)
+						}
 					}
 
 				};
 
 				$scope.$on( '$destroy', function () {
-					player.dispose();
+					if ( player ) {
+						player.dispose();
+					}
 				} );
 
-				$scope.$watchCollection( '[videoType, videoSource]', function ( newVal ) {
+				$scope.$watchCollection( '[videoType, videoSourceMP4, videoSourceVimeo]', function ( newVal ) {
 					configVideo();
 				} );
 

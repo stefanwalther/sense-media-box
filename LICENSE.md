@@ -32,14 +32,14 @@
 
 These external libraries are used within this solution. Many thanks to the authors!
 
-**Library 1**
-* Name:
-* License:
-* Url:
-* Author:
+**VideoJS**
+* Name: video.js
+* License: Apache License, Version 2.0
+* Url: https://github.com/videojs/video.js
+* Author: Brightcove, Inc.
 
-**Library 2**
-* Name:
-* License:
-* Url:
-* Author:
+**VideoJS-Vimeo**
+* Name: VideoJS-Vimeo Plugin
+* License: MIT
+* Url: https://github.com/eXon/videojs-vimeo
+* Author: Benoit Tremblay

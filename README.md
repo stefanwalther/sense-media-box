@@ -1,12 +1,6 @@
 # Media Box for Qlik Sense
 Include web pages, videos, images and much more into your Qlik Sense app.
 
-
-# Note, work is not finished yet ... stay tuned ...
-
----
----
-
 ## Purpose and Description
 
 The idea of this solution is to bundle the usage of several media-types into one Visualization Extension to be used within Qlik Sense.
@@ -17,6 +11,14 @@ As of now the following media types are currently supported:
 * Images
 
 ## Screenshots
+
+### Image
+
+
+
+### Video
+
+### Website
 
 ## Installation
 
@@ -44,7 +46,8 @@ Property 				| Description 						| Values
 
 Property 				| Description 						| Values
 -----------------------	| ---------------------------------	| --------------------------
-**Video type**			| Define the type of the video to be embedded | Possible types:<br/>`MP4` - <br/> 
+**Video type**			| Define the type of the video to be embedded | Possible types:<br/>`MP4` - Any valid Url to a MP4 video (e.g. )<br/>
+**Video preview**		| Define the preview image for the video	|
 
 #### Media type _Website_
 
@@ -53,9 +56,6 @@ Property 				| Description 						| Values
 **Web site (Url)** 		| Url of the website to be embedded	| Any valid website Url
 **Scrollbars**			| Behavior of scrollbars			| `Auto` - <br/>`Always On` - <br/>`Always Hidden` - 
 **Interaction**			| Define whether interaction with the website should be possible or not	| (Default: `Off`)
-
-
-
 
 
 ## Contributing
@@ -80,7 +80,7 @@ The following features are planned to be implemented:
 **Media type _Video_**
 - [ ] Support for Video type _YouTube_
 - [ ] Support for Video type _Vimeo_
-- [ ] Support for a preview image
+- [X] Support for a preview image
 
 Any further ideas, please let me know!
 
