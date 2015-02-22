@@ -14,11 +14,15 @@ As of now the following media types are currently supported:
 
 ### Image
 
-
+![](https://github.com/stefanwalther/qsMediaBox/raw/gh-pages/images/qsMediaBox_Image.png)
 
 ### Video
 
+![](https://github.com/stefanwalther/qsMediaBox/raw/gh-pages/images/qsMediaBox_Video_MP4.png)
+
 ### Website
+
+![](https://github.com/stefanwalther/qsMediaBox/raw/gh-pages/images/qsMediaBox_WebSite.png)
 
 ## Installation
 
