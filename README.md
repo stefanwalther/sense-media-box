@@ -26,7 +26,7 @@ As of now the following media types are currently supported:
 
 ## Installation
 
-1. Download the latest version
+1. Download the [latest version](https://github.com/stefanwalther/qsMediaBox/raw/master/build/MediaBox_latest.zip)
 2. Qlik Sense Desktop
 	* To install, copy all files in the .zip file to folder "C:\Users\%USERNAME%\Documents\Qlik\Sense\Extensions\MediaBox"
 3. Qlik Sense Server
@@ -44,7 +44,7 @@ Depending on the selected media type you'll then see different options in the pr
 
 Property 				| Description 						| Values
 -----------------------	| ---------------------------------	| --------------------------
-**Image Source (Url)**	| 
+**Image Source (Url)**	| Define the Url for the image to be embedded	|
 
 #### Media type _Video_
 
