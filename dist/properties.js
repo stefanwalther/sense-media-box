@@ -76,7 +76,7 @@ define( [], function () {
 		items: {
 			videoType: {
 				type: "string",
-				ref: "props.video.type",
+				ref: "props.video.videoType",
 				component: "dropdown",
 				label: "Video type",
 				options: [
@@ -84,16 +84,35 @@ define( [], function () {
 						value: "video/mp4",
 						label: "MP4"
 					}
+					//,
+					//{
+					//	value: "vimeo",
+					//	label: "Vimeo"
+					//}
 				]
 
 			},
-			videoSource: {
+			videoPoster: {
 				type: "string",
-				ref: "props.video.source",
+				ref: "props.video.poster",
+				label: "Video preview (Url)"
+			},
+			videoSourceMP4: {
+				type: "string",
+				ref: "props.video.sourceMP4",
 				label: "Video source (Url)",
 				expression: "optional",
 				show: function ( data ) {
-					return data.props.video.type === 'video/mp4';
+					return data.props.video && data.props.video.videoType && data.props.video.videoType === 'video/mp4';
+				}
+			},
+			videoSourceVimeo: {
+				type: "string",
+				ref: "props.video.sourceVimeo",
+				label: "Vimeo Id",
+				expression: "optional",
+				show: function ( data ) {
+					return data.props.video && data.props.video.videoType && data.props.video.videoType === 'vimeo';
 				}
 			}
 		}

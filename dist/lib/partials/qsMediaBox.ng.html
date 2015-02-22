@@ -1,5 +1,4 @@
 <div qv-extension>
-
 	<qs-mb-website ng-if="layout.props.mbType === 'website'"
 				   edit-mode="$parent.$parent.$parent.editmode"
 				   object-id="layout.qInfo.qId"
@@ -11,8 +10,9 @@
 				 edit-mode="$parent.$parent.$parent.editmode"
 				 object-id="layout.qInfo.qId"
 				 video-type="layout.props.video.videoType"
-				 video-source="layout.props.video.source"></qs-mb-video>
+				 video-poster="layout.props.video.poster"
+				 video-source-mp4="layout.props.video.sourceMP4"
+				 video-source-vimeo="layout.props.video.sourceVimeo"></qs-mb-video>
 
 	<qs-mb-image ng-if="layout.props.mbType === 'image'"></qs-mb-image>
-
 </div>

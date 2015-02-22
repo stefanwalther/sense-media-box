@@ -10,8 +10,6 @@ define( [
 			restrict: "E",
 			link: function ( $scope, $element, $attrs ) {
 
-				$element.addClass( 'qs-mb-image-container' );
-
 				var $img = $( document.createElement( 'img' ) );
 				$img.addClass( 'qs-mb-image' );
 				$img.id = 'mediabox_' + $scope.layout.qInfo.qId + '_image';
