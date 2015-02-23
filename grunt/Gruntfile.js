@@ -66,6 +66,7 @@ module.exports = function ( grunt ) {
 
 		// Optimization & Uglification
 		'uglify:release',
+		'less:videojs',
 
 		// Deploy to Qlik Sense Desktop
 		'clean:empty_desktop',

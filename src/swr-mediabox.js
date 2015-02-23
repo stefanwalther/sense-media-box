@@ -11,6 +11,7 @@
 define( [
 		'jquery',
 		'underscore',
+		'angular',
 		'./properties',
 		'./initialproperties',
 		'./lib/js/extensionUtils',
@@ -22,7 +23,7 @@ define( [
 		'./lib/directives/qsMbVideo/qsMbVideo',
 		'./lib/directives/qsMbWebsite/qsMbWebsite'
 	],
-	function ( $, _, props, initProps, extensionUtils, ngTemplate, cssContent ) {
+	function ( $, _, angular, props, initProps, extensionUtils, ngTemplate, cssContent ) {
 		'use strict';
 
 		extensionUtils.addStyleToHeader( cssContent );
@@ -33,8 +34,9 @@ define( [
 			initialProperties: initProps,
 			snapshot: {canTakeSnapshot: true},
 			template: ngTemplate,
-			controller: ['$scope', function ( $scope ) {
-				console.info( 'root $scope', $scope );
+			controller: ['$scope', function ( /*$scope*/ ) {
+				//console.info( 'root $scope', $scope );
+				angular.noop();
 			}]
 		};
 

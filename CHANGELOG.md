@@ -1,5 +1,14 @@
 # Change Log
 
+## Version 0.0.2
+Date: 2015-02-22
+
+**Fixes**
+* Style of video didn't render correctly in release mode and therefore the final release
+
+**Enhancements**
+* Reduce file size for all files in release
+
 ## Version 0.0.1
 Date: 2015-02-22
 

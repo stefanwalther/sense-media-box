@@ -41,7 +41,7 @@ define( [
 			},
 			controller: function ( $scope ) {
 
-				console.log( 'controller', $scope );
+				//console.log( 'controller', $scope );
 
 				$scope.trustedSource = '';
 			},
@@ -51,7 +51,7 @@ define( [
 
 				// Todo: Can be replaced with $watchGroup as soon as AngularJS 1.3 is in place
 				$scope.$watchCollection( '[websiteSource, websiteInteraction, websiteScrollBehavior, editMode]', function ( newVal ) {
-					console.log( 'MediaBox:Website new values', newVal );
+					//console.log( 'MediaBox:Website new values', newVal );
 					render();
 				} );
 
@@ -86,7 +86,7 @@ define( [
 
 					$scope.showOverlay = !$scope.websiteInteraction;
 
-					console.log( 'editMode', $scope.editMode );
+					//console.log( 'editMode', $scope.editMode );
 					if ( $scope.editMode == true ) {
 						$scope.showOverlay = true;
 					}

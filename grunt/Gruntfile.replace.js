@@ -21,7 +21,7 @@ module.exports = function ( grunt ) {
 				{
 					expand: true,
 					flatten: false,
-					src: ['../dist/**/*.*', '!../dist/**/*.{png,gif,jpg,ico,psd,eot,svg,ttf,woff}'],
+					src: ['../dist/**/*.*', '!../dist/**/*.{min.js,png,gif,jpg,ico,psd,eot,svg,ttf,woff}'],
 					dest: '../dist/'
 				}
 			]
@@ -38,7 +38,7 @@ module.exports = function ( grunt ) {
 				{
 					expand: true,
 					flatten: false,
-					src: ['../dist/*.*', '!../dist/**/*.{png,gif,jpg,ico,psd,eot,svg,ttf,woff}'],
+					src: ['../dist/*.*', '!../dist/**/*.{min.js,png,gif,jpg,ico,psd,eot,svg,ttf,woff}'],
 					dest: '../dist/'
 				}
 			]
@@ -55,7 +55,7 @@ module.exports = function ( grunt ) {
 				{
 					expand: true,
 					flatten: false,
-					src: ['../dist/**/*.*', '!../dist/**/*.{png,gif,jpg,ico,psd,eot,svg,ttf,woff}'],
+					src: ['../dist/**/*.*', '!../dist/**/*.{min.js,png,gif,jpg,ico,psd,eot,svg,ttf,woff}'],
 					dest: '../dist/'
 				}
 			]

@@ -31,7 +31,7 @@ define( [
 				var player;
 
 				function getSource () {
-					console.log( 'getSource.videoType', $scope.videoType );
+					//console.log( 'getSource.videoType', $scope.videoType );
 					switch ( $scope.videoType ) {
 						case 'video/mp4':
 							return $scope.videoSourceMp4;
@@ -69,10 +69,10 @@ define( [
 						poster: $scope.videoPoster
 					};
 
-					console.log( 'configVideo.options', options );
+					//console.log( 'configVideo.options', options );
 
 					var videoSource = getSource();
-					console.log( 'videoSource', videoSource );
+					//console.log( 'videoSource', videoSource );
 
 					if ( videoSource ) {
 						// Todo: Check if we can optimize this, silly duplicated code

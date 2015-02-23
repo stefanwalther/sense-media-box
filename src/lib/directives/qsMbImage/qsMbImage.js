@@ -26,7 +26,7 @@ define( [
 				render();
 
 				$scope.$watchCollection( 'layout.props.image', function ( newval ) {
-					console.log( 'image: render', $scope.layout.props.image );
+					//console.log( 'image: render', $scope.layout.props.image );
 					render();
 				} );
 
