@@ -52,6 +52,7 @@ Property 				| Description 						| Values
 -----------------------	| ---------------------------------	| --------------------------
 **Video type**			| Define the type of the video to be embedded | Possible types:<br/>`MP4` - Any valid Url to a MP4 video (e.g. )<br/>
 **Video preview**		| Define the preview image for the video	|
+**Video Url**			| Url to the video
 
 #### Media type _Website_
 
@@ -87,6 +88,10 @@ The following features are planned to be implemented:
 - [X] Support for a preview image
 
 Any further ideas, please let me know!
+
+## Known Issues
+
+* Video doesn't work in Qlik Sense Desktop but in local browser or Qlik Sense server.
 
 ## Author
 

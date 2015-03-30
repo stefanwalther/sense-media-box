@@ -6,8 +6,9 @@ define( [
 	'text!./videojs.min.css',
 
 	//no return value
-	'./videojs.min',
-	'./plugins/vjs.vimeo.min'
+	'./videojs.min'
+	//,
+	//'./plugins/vjs.vimeo.min'
 
 ], function ( qvangular, extensionUtils, ngTemplate, videojsCss ) {
 	'use strict';
@@ -26,7 +27,7 @@ define( [
 				videoSourceVimeo: '=',
 				videoPoster: '='
 			},
-			link: function ( $scope /*, $element, $attrs */ ) {
+			link: function ( $scope, $element /*, $attrs */ ) {
 
 				var player;
 
@@ -80,12 +81,14 @@ define( [
 					console.log( 'videoSource', videoSource );
 					console.log( '$scope', $scope );
 
+					console.log( 'element.first()', $element.find( 'video' )[0] );
+
 					if ( videoSource ) {
 						// Todo: Check if we can optimize this, silly duplicated code
 						if ( !player ) {
 
 							// Initialization
-							player = videojs( 'video_' + $scope.objectId, options, function () {
+							player = videojs( $element.find( 'video' )[0], options, function () {
 								var mPlayer = this;
 
 								mPlayer.src( {
