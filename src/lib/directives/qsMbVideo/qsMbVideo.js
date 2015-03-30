@@ -31,6 +31,11 @@ define( [
 				var player;
 
 				function getSource () {
+
+					return $scope.videoSourceMp4;
+
+					//
+					console.log( '$scope in qsMbVideo', $scope );
 					//console.log( 'getSource.videoType', $scope.videoType );
 					switch ( $scope.videoType ) {
 						case 'video/mp4':
@@ -69,17 +74,18 @@ define( [
 						poster: $scope.videoPoster
 					};
 
-					//console.log( 'configVideo.options', options );
+					console.log( 'configVideo.options', options );
 
 					var videoSource = getSource();
-					//console.log( 'videoSource', videoSource );
+					console.log( 'videoSource', videoSource );
+					console.log( '$scope', $scope );
 
 					if ( videoSource ) {
 						// Todo: Check if we can optimize this, silly duplicated code
 						if ( !player ) {
 
 							// Initialization
-							player = videojs( 'myVideo', options, function () {
+							player = videojs( 'video_' + $scope.objectId, options, function () {
 								var mPlayer = this;
 
 								mPlayer.src( {
@@ -100,7 +106,7 @@ define( [
 						}
 					}
 
-				};
+				}
 
 				$scope.$on( '$destroy', function () {
 					if ( player ) {

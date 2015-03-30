@@ -1,5 +1,12 @@
 # Change Log
 
+## Version 0.0.3
+Date: 2015-03-30
+
+**Fixes**
+* MP4 based videos didn't work correctly (property text box for defining the Video URL was not shown)
+
+
 ## Version 0.0.2
 Date: 2015-02-22
 

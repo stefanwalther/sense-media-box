@@ -77,19 +77,23 @@ define( [], function () {
 			videoType: {
 				type: "string",
 				ref: "props.video.videoType",
-				component: "dropdown",
+				//component: "dropdown",
 				label: "Video type",
-				options: [
-					{
-						value: "video/mp4",
-						label: "MP4"
-					}
-					//,
-					//{
-					//	value: "vimeo",
-					//	label: "Vimeo"
-					//}
-				]
+				//options: [
+				//	{
+				//		value: "video-mp4",
+				//		label: "MP4"
+				//	}
+				//	//,
+				//	//{
+				//	//	value: "vimeo",
+				//	//	label: "Vimeo"
+				//	//}
+				//],
+				defaultValue: "video/mp4",
+				show: function ( data ) {
+					return false;
+				}
 
 			},
 			videoPoster: {
@@ -103,18 +107,21 @@ define( [], function () {
 				label: "Video source (Url)",
 				expression: "optional",
 				show: function ( data ) {
-					return data.props.video && data.props.video.videoType && data.props.video.videoType === 'video/mp4';
-				}
-			},
-			videoSourceVimeo: {
-				type: "string",
-				ref: "props.video.sourceVimeo",
-				label: "Vimeo Id",
-				expression: "optional",
-				show: function ( data ) {
-					return data.props.video && data.props.video.videoType && data.props.video.videoType === 'vimeo';
+					return true;
+					//console.log( 'data', data );
+					//return data.props.video && data.props.video.videoType && data.props.video.videoType === 'video/mp4';
 				}
 			}
+			//,
+			//videoSourceVimeo: {
+			//	type: "string",
+			//	ref: "props.video.sourceVimeo",
+			//	label: "Vimeo Id",
+			//	expression: "optional",
+			//	show: function ( data ) {
+			//		return data.props.video && data.props.video.videoType && data.props.video.videoType === 'vimeo';
+			//	}
+			//}
 		}
 	};
 

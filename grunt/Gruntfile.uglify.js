@@ -11,9 +11,9 @@ module.exports = function ( grunt ) {
 		options: {
 			mangle: ('<%= projectConfig.release.uglify.mangle%>' === 'true'),
 			beautify: ('<%= projectConfig.release.uglify.beautify%>' === 'true'),
-			preserveComments: ('<%= projectConfig.release.uglify.preserveComments%>' === 'true'),
+			preserveComments: false,
 			compress: {
-				drop_console: ('<%= projectConfig.release.uglify.drop_console%>' == 'true')
+				drop_console: true
 			}
 		},
 		release: {
