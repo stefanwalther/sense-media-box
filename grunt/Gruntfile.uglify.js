@@ -45,6 +45,10 @@ module.exports = function ( grunt ) {
 				{
 					src: ['../dist/lib/directives/qsMbWebsite/qsMbWebsite.js'],
 					dest: '../dist/lib/directives/qsMbWebsite/qsMbWebsite.js'
+				},
+				{
+					src: ['../dist/lib/directives/qsMbHtml/qsMbHtml.js'],
+					dest: '../dist/lib/directives/qsMbHtml/qsMbHtml.js'
 				}
 			]
 		}

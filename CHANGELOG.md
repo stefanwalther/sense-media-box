@@ -1,5 +1,11 @@
 # Change Log
 
+## Version 0.1.9
+Date: 2015-04-06
+
+**Enhancements**
+* Added Mediabox type "HTML"
+
 ## Version 0.0.3
 Date: 2015-03-30
 

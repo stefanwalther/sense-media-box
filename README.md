@@ -6,23 +6,29 @@ Include web pages, videos, images and much more into your Qlik Sense app.
 The idea of this solution is to bundle the usage of several media-types into one Visualization Extension to be used within Qlik Sense.
 
 As of now the following media types are currently supported:
+
+* HTML (+CSS)
+* Images
 * Video
 * Web sites
-* Images
 
 ## Screenshots
 
+### HTML
+
+![](https://github.com/stefanwalther/qsMediaBox/raw/docs/images/qsMediaBox_Html.png)
+
 ### Image
 
-![](https://github.com/stefanwalther/qsMediaBox/raw/gh-pages/images/qsMediaBox_Image.png)
+![](https://github.com/stefanwalther/qsMediaBox/raw/docs/images/qsMediaBox_Image.png)
 
 ### Video
 
-![](https://github.com/stefanwalther/qsMediaBox/raw/gh-pages/images/qsMediaBox_Video_MP4.png)
+![](https://github.com/stefanwalther/qsMediaBox/raw/docs/images/qsMediaBox_Video_MP4.png)
 
 ### Website
 
-![](https://github.com/stefanwalther/qsMediaBox/raw/gh-pages/images/qsMediaBox_WebSite.png)
+![](https://github.com/stefanwalther/qsMediaBox/raw/docs/images/qsMediaBox_WebSite.png)
 
 ## Installation
 
@@ -39,6 +45,31 @@ After installing the Visualization Extension and dropping it onto a sheet in Qli
 ### 1. Define the media type
 
 Depending on the selected media type you'll then see different options in the property panel:
+
+#### Media type _Html_
+
+Property 				| Description 						| Example
+-----------------------	| ---------------------------------	| --------------------------
+**HTML**				| Define either inline HTML or reference to a field	| `=only(HTML)`<br/>or<br/>`='<div style="font-weight:bold;">inline HTML</div>'`
+
+
+*Example:*
+
+```bash
+Html:
+LOAD * INLINE [
+    HTML, HtmlAsset
+    'This is some <b>bold</b> test', 'Some Html'
+    'This is another test<br/><br/>with breaks<br/>and<br/>another break', 'Some Html with breaks'
+    '<div style="font-weight:bold;color:red;">Inline style</div>', 'Some Html with inline style'
+];
+```
+
+then use
+
+
+    =only(HTML)
+
 
 #### Media type _Image_
 
@@ -76,6 +107,9 @@ I cannot guarantee that I will merge all PRs but I will evaluate them all.
 
 The following features are planned to be implemented:
 
+**Media type _HTML_**
+- [ ] Allow definition of an external style-sheet
+
 **Media type _Website_**
 - [ ] Allow the user to select the [security settings for the embedded website](http://www.w3schools.com/tags/att_iframe_sandbox.asp) (now hardcoded)
 
@@ -96,7 +130,7 @@ Any further ideas, please let me know!
 ## Author
 
 **Stefan Walther**
-* [qlikblog.at](http://www.qlikblog.at)
+* [qliksite.io](http://qliksite.io)
 * [twitter/waltherstefan](http://twitter.com/waltherstefan)
 * [github.com/stefanwalther](http://github.com/stefanwalther)
 

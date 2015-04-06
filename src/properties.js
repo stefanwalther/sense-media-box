@@ -10,7 +10,12 @@ define( [], function () {
 		ref: "props.mbType",
 		component: "dropdown",
 		label: "Mediabox type",
+		//grouped: true,
 		options: [
+			{
+				value: "html",
+				label: "HTML"
+			},
 			{
 				value: "image",
 				label: "Image"
@@ -23,7 +28,9 @@ define( [], function () {
 				value: "website",
 				label: "Web site"
 			}
-		]
+		],
+		defaultValue: "html"
+
 	};
 
 	// ****************************************************************************************
@@ -62,6 +69,25 @@ define( [], function () {
 				defaultValue: "left"
 
 			}
+		}
+	};
+
+	// ****************************************************************************************
+	// Html
+	// ****************************************************************************************
+	var htmlProps = {
+		show: function ( data ) {
+			return data.props.mbType === 'html'
+		},
+		items: {
+			htmlSource: {
+				type: "string",
+				ref: "props.html.source",
+				expression: "optional"
+				//,
+				//defaultValue: '<div style="font-weight:bold;color: darkgreen;">This is the MediaBox</div>'
+			}
+
 		}
 	};
 
@@ -203,7 +229,8 @@ define( [], function () {
 					ddType: mbType,
 					imageProps: imageProps,
 					videoProps: videoProps,
-					websiteProps: websiteProps
+					websiteProps: websiteProps,
+					htmlProps: htmlProps
 				}
 			}
 		}

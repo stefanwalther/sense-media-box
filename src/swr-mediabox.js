@@ -21,7 +21,8 @@ define( [
 		//no return values
 		'./lib/directives/qsMbImage/qsMbImage',
 		'./lib/directives/qsMbVideo/qsMbVideo',
-		'./lib/directives/qsMbWebsite/qsMbWebsite'
+		'./lib/directives/qsMbWebsite/qsMbWebsite',
+		'./lib/directives/qsMbHtml/qsMbHtml'
 	],
 	function ( $, _, angular, props, initProps, extensionUtils, ngTemplate, cssContent ) {
 		'use strict';
