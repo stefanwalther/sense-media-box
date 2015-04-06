@@ -16,19 +16,19 @@ As of now the following media types are currently supported:
 
 ### HTML
 
-![](https://github.com/stefanwalther/qsMediaBox/raw/docs/images/qsMediaBox_Html.png)
+![](https://raw.githubusercontent.com/stefanwalther/qsMediaBox/master/docs/images/qsMediaBox_Html.png)
 
 ### Image
 
-![](https://github.com/stefanwalther/qsMediaBox/raw/docs/images/qsMediaBox_Image.png)
+![](https://raw.githubusercontent.com/stefanwalther/qsMediaBox/master/docs/images/qsMediaBox_Image.png)
 
 ### Video
 
-![](https://github.com/stefanwalther/qsMediaBox/raw/docs/images/qsMediaBox_Video_MP4.png)
+![](https://raw.githubusercontent.com/stefanwalther/qsMediaBox/master/docs/images/qsMediaBox_Video_MP4.png)
 
 ### Website
 
-![](https://github.com/stefanwalther/qsMediaBox/raw/docs/images/qsMediaBox_WebSite.png)
+![](https://raw.githubusercontent.com/stefanwalther/qsMediaBox/master/docs/images/qsMediaBox_WebSite.png)
 
 ## Installation
 
