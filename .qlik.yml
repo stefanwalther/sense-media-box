@@ -1,0 +1,16 @@
+name: Media Box,
+uniqueName: swr-mediabox
+description: Include web pages, videos, images and much more into your Qlik Sense app.
+type: visualization
+version: 0.1
+productVersion: 1.0
+author: Stefan Walther
+screenshots:
+  - label: Including Html
+    src: docs/images/qsMediaBox_Html.png
+  - label: Including an image
+    src: docs/images/qsMediaBox_Image.png
+  - label: Including a MP4 video
+    src: docs/images/qsMediaBox_Video_MP4.png
+  - label: Including a web site
+    src: docs/images/qsMediaBox_WebSite.png
