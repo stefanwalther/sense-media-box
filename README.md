@@ -107,11 +107,12 @@ I cannot guarantee that I will merge all PRs but I will evaluate them all.
 
 Here are some samples how to test if the MediaBox works for you:
 
-**HTML:**
+**Image:**  
+http://video-js.zencoder.com/oceans-clip.png  
 
-**Video:**
-Video poster image: http://video-js.zencoder.com/oceans-clip.png
-Video source: http://video-js.zencoder.com/oceans-clip.mp4
+**Video:**  
+Video poster image: http://video-js.zencoder.com/oceans-clip.png  
+Video source: http://video-js.zencoder.com/oceans-clip.mp4  
 
 ## Roadmap & Todos
 
