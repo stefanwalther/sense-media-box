@@ -73,24 +73,24 @@ then use
 
 #### Media type _Image_
 
-Property 				| Description 						| Values
------------------------	| ---------------------------------	| --------------------------
+Property 				| Description 						            | Values
+-----------------------	| --------------------------------------------- | --------------------------
 **Image Source (Url)**	| Define the Url for the image to be embedded	|
 
 #### Media type _Video_
 
-Property 				| Description 						| Values
------------------------	| ---------------------------------	| --------------------------
-**Video type**			| Define the type of the video to be embedded | Possible types:<br/>`MP4` - Any valid Url to a MP4 video (e.g. )<br/>
-**Video preview**		| Define the preview image for the video	|
+Property 				| Description 						            | Values
+-----------------------	| --------------------------------------------- | --------------------------
+**Video type**			| Define the type of the video to be embedded   | Possible types:<br/>`MP4` - Any valid Url to a MP4 video (e.g. )<br/>
+**Video poster image**	| Define the preview image for the video        |
 **Video Url**			| Url to the video
 
 #### Media type _Website_
 
-Property 				| Description 						| Values
------------------------	| ---------------------------------	| --------------------------
-**Web site (Url)** 		| Url of the website to be embedded	| Any valid website Url
-**Scrollbars**			| Behavior of scrollbars			| `Auto` - <br/>`Always On` - <br/>`Always Hidden` - 
+Property 				| Description 						            | Values
+-----------------------	| --------------------------------------------- | --------------------------
+**Web site (Url)** 		| Url of the website to be embedded	            | Any valid website Url
+**Scrollbars**			| Behavior of scrollbars			            | `Auto` - <br/>`Always On` - <br/>`Always Hidden` - 
 **Interaction**			| Define whether interaction with the website should be possible or not	| (Default: `Off`)
 
 
@@ -103,6 +103,16 @@ Contributing to this project is welcome. The process to do so is outlined below:
 
 I cannot guarantee that I will merge all PRs but I will evaluate them all.
 
+## Testing the visualization extension
+
+Here are some samples how to test if the MediaBox works for you:
+
+**HTML:**
+
+**Video:**
+Video poster image: http://video-js.zencoder.com/oceans-clip.png
+Video source: http://video-js.zencoder.com/oceans-clip.mp4
+
 ## Roadmap & Todos
 
 The following features are planned to be implemented:
@@ -112,9 +122,11 @@ The following features are planned to be implemented:
 
 **Media type _Website_**
 - [ ] Allow the user to select the [security settings for the embedded website](http://www.w3schools.com/tags/att_iframe_sandbox.asp) (now hardcoded)
+- [ ] Display an error if a website doesn't allow to be embedded, e.g. http://www.google.com
 
 **Media type _Image_**
 - [ ] Settings to control the images' aspect ratio
+- [ ] Vertical alignment
 
 **Media type _Video_**
 - [ ] Support for Video type _YouTube_
@@ -137,7 +149,7 @@ Any further ideas, please let me know!
 
 ## Change Log
 
-See [CHANGELOG.md](CHANGELOG.md)
+See [CHANGELOG](CHANGELOG.yml)
 
 ## License & Copyright
 The software is made available "AS IS" without any warranty of any kind under the MIT License (MIT).

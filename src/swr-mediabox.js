@@ -35,9 +35,10 @@ define( [
 			initialProperties: initProps,
 			snapshot: {canTakeSnapshot: true},
 			template: ngTemplate,
-			controller: ['$scope', function ( /*$scope*/ ) {
-				//console.info( 'root $scope', $scope );
+			controller: ['$scope', function ( $scope ) {
+				console.info( 'root $scope', $scope );
 				angular.noop();
+
 			}]
 		};
 

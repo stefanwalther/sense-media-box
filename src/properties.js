@@ -5,12 +5,11 @@ define( [], function () {
 	// ****************************************************************************************
 	// MediaBox Type
 	// ****************************************************************************************
-	var mbType = {
+	var mbTypeItem = {
 		type: "string",
 		ref: "props.mbType",
-		component: "dropdown",
-		label: "Mediabox type",
-		//grouped: true,
+		component: "radiobuttons",
+		label: "MediaBox type",
 		options: [
 			{
 				value: "html",
@@ -30,16 +29,23 @@ define( [], function () {
 			}
 		],
 		defaultValue: "html"
+	};
+
+	var mbTypeHeader = {
+		type: "items",
+		label: "MediaBox type",
+		items: {
+			mbType: mbTypeItem
+		}
 
 	};
 
 	// ****************************************************************************************
-	// Image
+	// Image Header
 	// ****************************************************************************************
-	var imageProps = {
-		show: function ( data ) {
-			return data.props.mbType === 'image';
-		},
+	var imagePropsHeader = {
+		type: "items",
+		label: "Image",
 		items: {
 			imageSource: {
 				type: "string",
@@ -67,27 +73,31 @@ define( [], function () {
 					}
 				],
 				defaultValue: "left"
-
 			}
+		},
+		show: function ( data ) {
+			return data.props.mbType === 'image';
 		}
 	};
 
 	// ****************************************************************************************
-	// Html
+	// Html Header
 	// ****************************************************************************************
-	var htmlProps = {
-		show: function ( data ) {
-			return data.props.mbType === 'html'
-		},
+	var htmlPropsHeader = {
+		type: "items",
+		label: "Html",
 		items: {
 			htmlSource: {
 				type: "string",
 				ref: "props.html.source",
 				expression: "optional"
-				//,
-				//defaultValue: '<div style="font-weight:bold;color: darkgreen;">This is the MediaBox</div>'
+				,
+				defaultValue: '<div style="font-weight:bold;color: darkgreen;">This is the MediaBox</div>'
 			}
 
+		},
+		show: function ( data ) {
+			return data.props.mbType === 'html'
 		}
 	};
 
@@ -95,10 +105,9 @@ define( [], function () {
 	// Video
 	// ****************************************************************************************
 
-	var videoProps = {
-		show: function ( data ) {
-			return data.props.mbType === 'video';
-		},
+	var videoPropsHeader = {
+		type: "items",
+		label: "Video",
 		items: {
 			videoType: {
 				type: "string",
@@ -125,7 +134,7 @@ define( [], function () {
 			videoPoster: {
 				type: "string",
 				ref: "props.video.poster",
-				label: "Video preview (Url)"
+				label: "Video poster image (Url)"
 			},
 			videoSourceMP4: {
 				type: "string",
@@ -148,17 +157,19 @@ define( [], function () {
 			//		return data.props.video && data.props.video.videoType && data.props.video.videoType === 'vimeo';
 			//	}
 			//}
+		},
+		show: function ( data ) {
+			return data.props.mbType === 'video';
 		}
 	};
 
 	// ****************************************************************************************
-	// Website
+	// Website Header
 	// ****************************************************************************************
 
-	var websiteProps = {
-		show: function ( data ) {
-			return data.props.mbType === 'website';
-		},
+	var websitePropsHeader = {
+		type: "items",
+		label: "Web site",
 		items: {
 			settings: {
 				type: "items",
@@ -211,6 +222,9 @@ define( [], function () {
 					}
 				}
 			}
+		},
+		show: function ( data ) {
+			return data.props.mbType === 'website';
 		}
 	};
 
@@ -219,20 +233,36 @@ define( [], function () {
 	// ****************************************************************************************
 
 	// Appearance Panel
-	var appearancePanel = {
-		uses: "settings",
+	var appearanceSection = {
+		uses: "settings"
+		//,
+		//items: {
+		//	mbSettings: {
+		//		type: "items",
+		//		label: "MediaBox definition",
+		//		items: {
+		//			ddType: mbTypeItem,
+		//			imageProps: imageProps,
+		//			videoProps: videoProps,
+		//			websiteProps: websiteProps,
+		//			htmlProps: htmlProps
+		//		}
+		//	}
+		//}
+	};
+
+	var mediaBoxSection = {
+		type: "items",
+		component: "expandable-items",
+		label: "MediaBox",
 		items: {
-			mbSettings: {
-				type: "items",
-				label: "Mediabox definition",
-				items: {
-					ddType: mbType,
-					imageProps: imageProps,
-					videoProps: videoProps,
-					websiteProps: websiteProps,
-					htmlProps: htmlProps
-				}
-			}
+
+			mbType: mbTypeHeader,
+			image: imagePropsHeader,
+			html: htmlPropsHeader,
+			website: websitePropsHeader,
+			video: videoPropsHeader
+
 		}
 	};
 
@@ -241,7 +271,8 @@ define( [], function () {
 		type: "items",
 		component: "accordion",
 		items: {
-			appearance: appearancePanel
+			appearance: appearanceSection,
+			mediaBoxSection: mediaBoxSection
 		}
 	};
 
