@@ -1,6 +1,6 @@
 {
-  "name": "qsMediaBox",
-  "version": "0.2.1",
+  "name": "sense-media-box",
+  "version": "0.2.2",
   "description": "Include web pages, videos, images and much more into your Qlik Sense app.",
   "main": "-",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/stefanwalther/qsMediaBox"
+    "url": "https://github.com/stefanwalther/sense-media-box"
   },
   "keywords": [
     "qliksense-visualization-extension",
@@ -20,7 +20,7 @@
   "author": "Stefan Walther",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/stefanwalther/qsMediaBox/issues"
+    "url": "https://github.com/stefanwalther/sense-media-box/issues"
   },
-  "homepage": "https://github.com/stefanwalther/qsMediaBox"
+  "homepage": "https://github.com/stefanwalther/sense-media-box"
 }

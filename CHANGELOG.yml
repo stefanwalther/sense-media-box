@@ -1,22 +1,26 @@
-v0.2.0
+v0.2.1:
+  date: "2015-07-06"
+  enhancements:
+    - Changed name to sense-media-box
+v0.2.0:
   date: "2015-05-20"
   fixes:
     - Fixed for Qlik Sense 1.1
-v0.1.9
+v0.1.9:
   date: "2015-04-06"
   enhancements: 
     - Added MediaBox type "HTML"
-v0.0.3
+v0.0.3:
   date: "2015-03-30"
   enhancements:
     - MP4 based videos didn't work correctly (property text box for defining the Video URL was not shown)
-v0.0.2
+v0.0.2:
   date: "2015-02-22"
   fixes:
     - Style of video didn't render correctly in release mode and therefore the final release
   enhancements:
     -Reduce file size for all files in release
-v0.0.1
+v0.0.1:
   date: "2015-02-22"
   new: 
     - Initial Commit
