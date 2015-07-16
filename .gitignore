@@ -4,7 +4,6 @@
 [Rr]esources/
 [Tt]ests/
 web.*.config
-/dist/
 /dist_dev/
 /**/node_modules/
 /**/bower_components/

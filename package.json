@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/stefanwalther/sense-media-box/issues"
   },
-  "homepage": "https://github.com/stefanwalther/sense-media-box"
+  "homepage": "https://github.com/stefanwalther/sense-media-box",
+  "devDependencies": {
+    "verb": "git://github.com/verbose/verb"
+  }
 }
