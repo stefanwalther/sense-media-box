@@ -6,12 +6,6 @@
 
 ***
 
-## Table of Contents
-
-<!-- toc -->
-
-***
-
 ## Purpose and Description
 
 The idea of this solution is to bundle the usage of several media-types into one Visualization Extension to be used within Qlik Sense.
