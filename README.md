@@ -2,7 +2,7 @@
 
 > Include web pages, videos, images and much more into your Qlik Sense app.
 
-![](http://serve.mod.biz/branch/)
+![](http://serve.mod.bz/branch/)
 
 ***
 
