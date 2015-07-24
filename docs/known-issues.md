@@ -1,0 +1,1 @@
+* Video doesn't work in Qlik Sense Desktop but in local browser or Qlik Sense server.
