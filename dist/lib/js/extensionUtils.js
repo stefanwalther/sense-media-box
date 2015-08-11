@@ -1,1 +1,0 @@
-define(["jquery","underscore"],function($){"use strict";return{addStyleToHeader:function(cssContent){$("<style>").html(cssContent).appendTo("head")},addStyleLinkToHeader:function(linkUrl){var $styleLink=$(document.createElement("link"));$styleLink.attr("rel","stylesheet"),$styleLink.attr("type","text/css"),$styleLink.attr("href",linkUrl),$("head").append($styleLink)}}});
