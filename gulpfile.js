@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var senseGo = require('sense-go');
 
 var userConfig = {
-	"packageName": "Your Package Name"
+	"packageName": "sense-media-box"
 };
 
 senseGo.init( gulp, userConfig,  function (  ) {
