@@ -1,6 +1,6 @@
 {
   "name": "sense-media-box",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "Include web pages, videos, images and much more into your Qlik Sense app.",
   "main": "-",
   "scripts": {
