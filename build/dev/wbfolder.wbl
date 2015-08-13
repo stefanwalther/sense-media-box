@@ -14,7 +14,7 @@ lib/directives/qsMbVideo/videojs.min.css;
 lib/directives/qsMbVideo/videojs.min.js;
 lib/directives/qsMbWebsite/qsMbWebsite.js;
 lib/directives/qsMbWebsite/qsMbWebsite.ng.html;
-lib/js/extensionUtils.js;
+lib/js/extUtils.js;
 lib/partials/qsMediaBox.ng.html;
 mediabox.png;
 properties.js;

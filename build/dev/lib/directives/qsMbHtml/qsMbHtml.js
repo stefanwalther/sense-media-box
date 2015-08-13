@@ -2,7 +2,8 @@
 define( [
 		'underscore',
 		'qvangular'
-	], function ( _, qvangular ) {
+	], function ( _,
+				  qvangular ) {
 		'use strict';
 
 		qvangular.directive( 'qsMbHtml', function () {

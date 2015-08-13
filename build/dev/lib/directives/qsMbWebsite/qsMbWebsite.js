@@ -5,7 +5,10 @@ define( [
 	'qvangular',
 	'text!./qsMbWebsite.ng.html'
 
-], function ( $, _, qvangular, ngTemplate ) {
+], function ( $,
+			  _,
+			  qvangular,
+			  ngTemplate ) {
 	'use strict';
 
 	qvangular.directive( 'qsMbWebsite', ['$sce', function ( $sce ) {
@@ -50,9 +53,11 @@ define( [
 				var $ifr = $element.find( 'iframe' );
 
 				// Todo: Can be replaced with $watchGroup as soon as AngularJS 1.3 is in place
-				$scope.$watchCollection( '[websiteSource, websiteInteraction, websiteScrollBehavior, editMode]', function ( newVal ) {
-					//console.log( 'MediaBox:Website new values', newVal );
-					render();
+				$scope.$watchCollection( '[websiteSource, websiteInteraction, websiteScrollBehavior, editMode]', function ( newVal, oldVal ) {
+					if (newVal && newVal !== oldVal) {
+						//console.log( 'MediaBox:Website new values', newVal );
+						render();
+					}
 				} );
 
 				var render = function () {

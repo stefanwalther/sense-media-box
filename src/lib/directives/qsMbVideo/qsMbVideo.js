@@ -1,7 +1,7 @@
 /*global define*/
 define( [
 	'qvangular',
-	'./../../js/extensionUtils',
+	'./../../js/extUtils',
 	'text!./qsMbVideo.ng.html',
 	'text!./videojs.min.css',
 
@@ -10,12 +10,15 @@ define( [
 	//,
 	//'./plugins/vjs.vimeo.min'
 
-], function ( qvangular, extensionUtils, ngTemplate, videojsCss ) {
+], function ( qvangular,
+			  extUtils,
+			  ngTemplate,
+			  videojsCss ) {
 	'use strict';
 
 	qvangular.directive( 'qsMbVideo', function () {
 
-		extensionUtils.addStyleToHeader( videojsCss );
+		extUtils.addStyleToHeader( videojsCss );
 
 		return {
 			restrict: "E",

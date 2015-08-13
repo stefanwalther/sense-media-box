@@ -14,7 +14,7 @@ define( [
 		'angular',
 		'./properties',
 		'./initialproperties',
-		'./lib/js/extensionUtils',
+		'./lib/js/extUtils',
 		'text!./lib/partials/qsMediaBox.ng.html',
 		'text!./lib/css/main.css',
 
