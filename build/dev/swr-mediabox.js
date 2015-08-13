@@ -16,7 +16,7 @@ define( [
 		'./initialproperties',
 		'./lib/js/extensionUtils',
 		'text!./lib/partials/qsMediaBox.ng.html',
-		'text!./lib/css/style.css',
+		'text!./lib/css/main.css',
 
 		//no return values
 		'./lib/directives/qsMbImage/qsMbImage',

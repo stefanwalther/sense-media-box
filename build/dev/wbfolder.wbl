@@ -1,4 +1,5 @@
 initialproperties.js;
+lib/css/main.css;
 lib/css/style.css;
 lib/directives/qsMbHtml/qsMbHtml.js;
 lib/directives/qsMbImage/qsMbImage.js;
