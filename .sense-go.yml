@@ -1,0 +1,30 @@
+# -------------------------------------------------------------------
+# General mandatory settings
+# -------------------------------------------------------------------
+packageName: sense-media-box
+
+# -------------------------------------------------------------------
+# Task specific settings
+# -------------------------------------------------------------------
+
+wbfolder:
+  enabled: false
+
+# -------------------------------------------------------------------
+# Deployment
+# -------------------------------------------------------------------
+deployment:
+  toLocal:
+    enabled: false
+    pathFetching: true              # By default the path will be automatically fetched.
+    extensionBaseDir: null          # Define the extensionBaseDir if pathFetching is disabled and you still want to deploy locally
+  qrs:                              # Not implemented, yet
+    enabled: false
+    url: null
+  toSsh:                            # Upload via SSH
+    enabled: true
+    host: "192.168.56.11"
+    port: 22
+    username: "stefanwalther"
+    password: "Test1234"
+    dest: "/cygdrive/c/Users/stefanwalther/Documents/Qlik/Sense/Extensions/sense-media-box"
