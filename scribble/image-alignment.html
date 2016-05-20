@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.container {
+			position: relative;
+			height: 200px;
+			width: 200px;
+			background-color:#0b97c4;
+		}
+		.container > img {
+			position: absolute;
+		}
+		.container > img.bottom {
+			bottom:0px;
+		}
+		.container > img.middle {
+			top:0;
+			bottom:0;
+			margin:auto;
+		}
+		.container > img.top {
+			top:0px;
+		}
+		.container > img.center {
+			left:0;
+			right:0;
+			margin:auto;
+		}
+		.container > img.left {
+			left: 0px;
+		}
+		.container > img.right {
+			right: 0px;
+		}
+		.container > img.bestfit {
+			width:100%;
+			max-width: 100%;
+		}
+	</style>
+</head>
+<body>
+
+<div class="container">
+	<img src="img.jpg" class="bestfit middle" />
+</div>
+
+</body>
+</html>
