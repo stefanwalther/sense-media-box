@@ -42,12 +42,12 @@ define( [
 				 */
 				editMode: '='
 			},
-			controller: function ( $scope ) {
+			controller: ['$scope', function ( $scope ) {
 
 				//console.log( 'controller', $scope );
 
 				$scope.trustedSource = '';
-			},
+			}],
 			link: function ( $scope, $element, $attrs ) {
 
 				var $ifr = $element.find( 'iframe' );

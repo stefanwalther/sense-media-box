@@ -1,3 +1,7 @@
+v0.3.0:
+  date: "2016-05-20"
+  enhancements:
+    - "Added horizontal & vertical alignment of images + aspect ratio"
 v0.2.2:
   date: "2015-08-02"
   enhancements:

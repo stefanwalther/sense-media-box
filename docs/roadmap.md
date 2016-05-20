@@ -8,8 +8,8 @@ The following features are planned to be implemented:
 - [ ] Display an error if a website doesn't allow to be embedded, e.g. http://www.google.com
 
 **Media type _Image_**
-- [ ] Settings to control the images' aspect ratio
-- [ ] Vertical alignment
+- [x] Settings to control the images' aspect ratio
+- [x] Vertical alignment
 
 **Media type _Video_**
 - [ ] Support for Video type _YouTube_

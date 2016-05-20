@@ -32,7 +32,10 @@ then use
 
 #### Media type _Image_
 
-* **Image Source (Url)** - Define the Url for the image to be embedded
+* **Image Source (Url)** - Define the Url for the image to be embedded.
+* **Vertical Alignment** - Vertical alignment of the image, defaults to "top". 
+* **Horizontal Alignment** - Horizontal alignment of the image, defaults to "left".
+* **Image aspect ratio** - Either "keep size" or "best fit", which uses the maximum available width.
 
 #### Media type _Video_
 
