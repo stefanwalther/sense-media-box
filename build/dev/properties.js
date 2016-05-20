@@ -20,6 +20,10 @@ define( [], function () {
 				label: "Image"
 			},
 			{
+				value: "imageFromLib",
+				label: "Image from library"
+			},
+			{
 				value: "video",
 				label: "Video"
 			},
@@ -117,6 +121,43 @@ define( [], function () {
 			return data.props.mbType === 'image';
 		}
 	};
+
+	// ****************************************************************************************
+	// Image from Media Library
+	// ****************************************************************************************
+	var imageFromLibHeader = {
+		type: "items",
+		label: "Image from Library",
+		items: {
+			backgroundUrl: {
+				ref: "background.url.qStaticContentUrlDef.qUrl",
+				layoutRef: "background.url.qStaticContentUrl.qUrl",
+				schemaIgnore: true,
+				translation: "Common.Image",
+				tooltip: { select: "properties.media.select", remove: "properties.media.removeBackground" },
+				type: "string",
+				component: "media",
+				defaultValue: ""
+			}
+		},
+		show: function ( data ) {
+			return data.props.mbType === 'imageFromLib'
+		}
+	};
+
+	// var backgroundUrl: {
+	// 	ref: "background.url.qStaticContentUrlDef.qUrl",
+	// 		layoutRef: "background.url.qStaticContentUrl.qUrl",
+	// 		schemaIgnore: true,
+	// 		translation: "Common.Image",
+	// 		tooltip: { select: "properties.media.select", remove: "properties.media.removeBackground" },
+	// 	type: "string",
+	// 		component: "media",
+	// 		defaultValue: "",
+	// 		show: function ( itemData ) {
+	// 		return propertyResolver.getValue( itemData, "background.isUsed" );
+	// 	}
+	// },
 
 	// ****************************************************************************************
 	// Html Header
@@ -273,20 +314,6 @@ define( [], function () {
 	// Appearance Panel
 	var appearanceSection = {
 		uses: "settings"
-		//,
-		//items: {
-		//	mbSettings: {
-		//		type: "items",
-		//		label: "MediaBox definition",
-		//		items: {
-		//			ddType: mbTypeItem,
-		//			imageProps: imageProps,
-		//			videoProps: videoProps,
-		//			websiteProps: websiteProps,
-		//			htmlProps: htmlProps
-		//		}
-		//	}
-		//}
 	};
 
 	var mediaBoxSection = {
@@ -297,6 +324,7 @@ define( [], function () {
 
 			mbType: mbTypeHeader,
 			image: imagePropsHeader,
+			imageFromLib: imageFromLibHeader,
 			html: htmlPropsHeader,
 			website: websitePropsHeader,
 			video: videoPropsHeader
