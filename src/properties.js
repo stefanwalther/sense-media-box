@@ -144,20 +144,7 @@ define( [], function () {
 			return data.props.mbType === 'imageFromLib'
 		}
 	};
-
-	// var backgroundUrl: {
-	// 	ref: "background.url.qStaticContentUrlDef.qUrl",
-	// 		layoutRef: "background.url.qStaticContentUrl.qUrl",
-	// 		schemaIgnore: true,
-	// 		translation: "Common.Image",
-	// 		tooltip: { select: "properties.media.select", remove: "properties.media.removeBackground" },
-	// 	type: "string",
-	// 		component: "media",
-	// 		defaultValue: "",
-	// 		show: function ( itemData ) {
-	// 		return propertyResolver.getValue( itemData, "background.isUsed" );
-	// 	}
-	// },
+	
 
 	// ****************************************************************************************
 	// Html Header
