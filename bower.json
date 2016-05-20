@@ -1,5 +1,5 @@
 {
-  "name": "qsMediaBox",
+  "name": "sense-media-box",
   "version": "0.1.0",
   "authors": [
     "Stefan Walther"
@@ -8,10 +8,10 @@
   "main": "-",
   "keywords": [
     "qliksense-visualization-extension",
-    "Qlik",
-    "Sense",
-    "Qlik",
-    "extension"
+    "qlik",
+    "qlik-sense",
+    "sense",
+    "extensions"
   ],
   "license": "MIT",
   "homepage": "https://github.com/stefanwalther/qsMediaBox",
