@@ -1,6 +1,6 @@
 {
   "name": "sense-media-box",
-  "version": "0.2.9",
+  "version": "0.3.0",
   "description": "Include web pages, videos, images and much more into your Qlik Sense app.",
   "main": "-",
   "scripts": {
@@ -12,9 +12,14 @@
   },
   "keywords": [
     "qliksense-visualization-extension",
-    "Qlik",
-    "Sense",
-    "Extension",
+    "qlik",
+    "sense",
+    "qlik-sense",
+    "extensions",
+    "visualizations",
+    "videos",
+    "images",
+    "embedding",
     "videojs"
   ],
   "author": "Stefan Walther",
