@@ -73,6 +73,44 @@ define( [], function () {
 					}
 				],
 				defaultValue: "left"
+			},
+			imageVerticalAlign: {
+				type: "string",
+				ref: "props.image.verticalAlign",
+				component: "buttongroup",
+				label: "Vertical align",
+				options: [
+					{
+						value: "top",
+						label: "Top"
+					},
+					{
+						value: "middle",
+						label: "Middle"
+					},
+					{
+						value: "bottom",
+						label: "Bottom"
+					}
+				],
+				defaultValue: "top"
+			},
+			imageAspectRatio: {
+				type: "string",
+				ref: "props.image.imageAspectRatio",
+				component: "dropdown",
+				label: "Image aspect ratio",
+				options: [
+					{
+						value: "keep",
+						label: "Keep size"
+					},
+					{
+						value: "bestfit",
+						label: "Best fit"
+					}
+				],
+				defaultValue: "bestfit"
 			}
 		},
 		show: function ( data ) {

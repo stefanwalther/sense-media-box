@@ -1,7 +1,39 @@
 
-.qs-mb-image {
+.qs-mb-image-container {
 
-	width: 100%;
-	display: block;
+	> img {
+		position: absolute;
+
+		&.top {
+			top: 0px;
+		}
+		&.bottom {
+			bottom: 0px;
+		}
+		&.middle {
+			top:0;
+			bottom:0;
+			margin:auto;
+		}
+		&.right {
+			right:0px;
+		}
+		&.left {
+			left: 0px;
+		}
+		&.center {
+			left:0;
+			right:0;
+			margin:auto;
+		}
+		&.bestfit {
+			width:100%;
+			max-width: 100%;
+		}
+		&.keep {
+			border-width:0px; // just keep something here, otherwise the class will be deleted
+		}
+	}
 
 }
+

@@ -7,11 +7,21 @@
 //      either the "dev" or "release" Grunt task
 // ----------------------------------------------------------------------------
 
+
 .qv-object-swr-mediabox {
 
 	width: 100%;
 	height: 100%;
 	position: absolute;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+
+
+	/* Todo: in case of isSmallDevice the padding needs to be changed
+	&.qv-layout-medium {
+		width: ~"calc(100% - 20px)";
+	 }
+	 */
 
 	@import "../directives/qsMbWebsite/qsMbWebsite.less";
 	@import "../directives/qsMbImage/qsMbImage.less";

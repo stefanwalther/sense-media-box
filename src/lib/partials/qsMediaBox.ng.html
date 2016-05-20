@@ -14,7 +14,10 @@
 				 video-source-mp4="layout.props.video.sourceMP4"
 				 video-source-vimeo="layout.props.video.sourceVimeo"></qs-mb-video>
 
-	<qs-mb-image ng-if="layout.props.mbType === 'image'"></qs-mb-image>
+	<qs-mb-image ng-if="layout.props.mbType === 'image'"
+				 img="layout.props.image.source"
+				 vertical-align="layout.props.image.verticalAlign"
+				 horizontal-align="layout.props.image.horizontalAlign"
+				 image-aspect-ratio="layout.props.image.imageAspectRatio"></qs-mb-image>
 	<qs-mb-html ng-if="layout.props.mbType === 'html'"></qs-mb-html>
-
 </div>
