@@ -24,8 +24,8 @@
   },
   "homepage": "https://github.com/stefanwalther/sense-media-box",
   "devDependencies": {
-    "gulp": "file:C:\\Users\\swr\\AppData\\Local\\Temp\\npm-8996-86af7037\\git-cache-5c0eac1a0d2b\\aaed69d1fd73750227e803035b2a75d0f49e7de0",
-    "sense-go": "^0.3.3",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "sense-go": "github:stefanwalther/sense-go#0.6",
     "verb": "git://github.com/verbose/verb"
   }
 }
