@@ -162,6 +162,8 @@ The following features are planned to be implemented:
 
 * [X] Support for a preview image
 
+* [ ] Default video image (if not provided)
+
 Any further ideas, please let me know!
 
 ## Known Issues
