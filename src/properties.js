@@ -17,7 +17,7 @@ define( [], function () {
 			},
 			{
 				value: "image",
-				label: "Image"
+				label: "Image from Url"
 			},
 			{
 				value: "imageFromLib",
@@ -49,14 +49,50 @@ define( [], function () {
 	// ****************************************************************************************
 	var imagePropsHeader = {
 		type: "items",
-		label: "Image",
+		label: "Image from Url",
 		items: {
 			imageSource: {
 				type: "string",
 				ref: "props.image.source",
 				label: "Image source (Url)",
 				expression: "optional"
-			},
+			}
+		},
+		show: function ( data ) {
+			return data.props.mbType === 'image';
+		}
+	};
+
+	// ****************************************************************************************
+	// Image from Media Library
+	// ****************************************************************************************
+	var imageFromLibHeader = {
+		type: "items",
+		label: "Image from Library",
+		items: {
+			backgroundUrl: {
+				ref: "props.imageFromLib.url",
+				layoutRef: "props.imageFromLib.url",
+				schemaIgnore: true,
+				translation: "Common.Image",
+				tooltip: { select: "Select image", remove: "Remove image" },
+				type: "string",
+				component: "media",
+				defaultValue: ""
+			}
+		},
+		show: function ( data ) {
+			return data.props.mbType === 'imageFromLib'
+		}
+	};
+
+	// ****************************************************************************************
+	// Image formatting
+	// ****************************************************************************************
+	var imageFormattingHeader = {
+		type: "items",
+		label: "Image formatting",
+		items: {
 			imageHorizontalAlign: {
 				type: "string",
 				ref: "props.image.horizontalAlign",
@@ -118,30 +154,7 @@ define( [], function () {
 			}
 		},
 		show: function ( data ) {
-			return data.props.mbType === 'image';
-		}
-	};
-
-	// ****************************************************************************************
-	// Image from Media Library
-	// ****************************************************************************************
-	var imageFromLibHeader = {
-		type: "items",
-		label: "Image from Library",
-		items: {
-			backgroundUrl: {
-				ref: "background.url.qStaticContentUrlDef.qUrl",
-				layoutRef: "background.url.qStaticContentUrl.qUrl",
-				schemaIgnore: true,
-				translation: "Common.Image",
-				tooltip: { select: "properties.media.select", remove: "properties.media.removeBackground" },
-				type: "string",
-				component: "media",
-				defaultValue: ""
-			}
-		},
-		show: function ( data ) {
-			return data.props.mbType === 'imageFromLib'
+			return data.props.mbType === 'imageFromLib' || data.props.mbType === 'image'
 		}
 	};
 	
@@ -312,6 +325,7 @@ define( [], function () {
 			mbType: mbTypeHeader,
 			image: imagePropsHeader,
 			imageFromLib: imageFromLibHeader,
+			imageFormatting: imageFormattingHeader,
 			html: htmlPropsHeader,
 			website: websitePropsHeader,
 			video: videoPropsHeader
