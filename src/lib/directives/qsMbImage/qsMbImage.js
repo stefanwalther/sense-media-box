@@ -16,7 +16,7 @@ define( [
 					horizontalAlign: '=',
 					imageAspectRatio: '='
 				},
-				template: '<div class="qs-mb-image-container"><img src="{{img}}" class="{{verticalAlign}} {{horizontalAlign}} {{imageAspectRatio}}" /></div>'
+				template: '<div class="qs-mb-image-container"><img src="{{img}}" title="{{img}}" class="{{verticalAlign}} {{horizontalAlign}} {{imageAspectRatio}}" /></div>'
 			}
 		} );
 	}

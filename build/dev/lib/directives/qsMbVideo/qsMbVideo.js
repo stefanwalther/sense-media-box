@@ -38,9 +38,6 @@ define( [
 
 					return $scope.videoSourceMp4;
 
-					//
-					console.log( '$scope in qsMbVideo', $scope );
-					//console.log( 'getSource.videoType', $scope.videoType );
 					switch ( $scope.videoType ) {
 						case 'video/mp4':
 							return $scope.videoSourceMp4;
@@ -78,14 +75,9 @@ define( [
 						poster: $scope.videoPoster
 					};
 
-					console.log( 'configVideo.options', options );
-
+			
 					var videoSource = getSource();
-					console.log( 'videoSource', videoSource );
-					console.log( '$scope', $scope );
-
-					console.log( 'element.first()', $element.find( 'video' )[0] );
-
+			
 					if ( videoSource ) {
 						// Todo: Check if we can optimize this, silly duplicated code
 						if ( !player ) {

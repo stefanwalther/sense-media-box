@@ -36,9 +36,21 @@ define( [
 			snapshot: {canTakeSnapshot: true},
 			template: ngTemplate,
 			controller: ['$scope', function ( $scope ) {
-				console.info( 'root $scope', $scope );
-				angular.noop();
-
+				
+				$scope.getImageUrl = function (  ) {
+					switch ($scope.layout.props.mbType) {
+						case "image":
+							return $scope.layout.props.image.source;
+							break;
+						case "imageFromLib":
+							return $scope.layout.props.imageFromLib.url;
+							break;
+						default:
+							return '';
+					}	
+				};
+				
+				
 			}]
 		};
 
