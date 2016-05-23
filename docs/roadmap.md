@@ -12,8 +12,9 @@ The following features are planned to be implemented:
 - [x] Vertical alignment
 
 **Media type _Video_**
-- [ ] Support for Video type _YouTube_
-- [ ] Support for Video type _Vimeo_
+- [ ] Support for a video type _YouTube_
+- [ ] Support for a video type _Vimeo_
+- [ ] Support for a video from the media library
 - [X] Support for a preview image
 
 Any further ideas, please let me know!

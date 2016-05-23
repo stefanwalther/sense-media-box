@@ -167,9 +167,9 @@ define( [], function () {
 		items: {
 			htmlSource: {
 				type: "string",
+				component: "text",
 				ref: "props.html.source",
-				expression: "optional"
-				,
+				expression: "optional",
 				defaultValue: '<div style="font-weight:bold;color: darkgreen;">This is the MediaBox</div>'
 			}
 
