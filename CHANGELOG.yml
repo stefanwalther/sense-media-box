@@ -1,3 +1,7 @@
+v0.5.0:
+  date: "2016-05-24"
+  new:
+    - "Allow embedding videos from YouTube"
 v0.4.1:
   date: "2016-05-23"
   fixes:
