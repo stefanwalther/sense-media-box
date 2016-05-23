@@ -22,14 +22,9 @@
     "test",
     "tests"
   ],
-  "devDboweependencies": {
-    "video.js": "~4.11.4",
-    "videojs-vimeo": "*"
-  },
-  "resolutions": {
-    "video.js": "~4.11.4"
-  },
   "devDependencies": {
-    "video.js": "~4.11.4"
+    "video.js": "^5.10.2",
+    "videojs-youtube": "^2.0.8",
+    "videojs-vimeo": "^2.0.0"
   }
 }
