@@ -174,6 +174,10 @@ The following features are planned to be implemented:
 * [ ] Support for a video from the media library
 * [X] Support for a preview image
 
+**Actions**
+
+* [ ] Allow actions for all media types (e.g. jump to sheet, open application, etc.)
+
 Any further ideas, please let me know!
 
 ## Known Issues
