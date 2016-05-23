@@ -1,7 +1,7 @@
 'use strict';
-var gulp = require('gulp');
-var senseGo = require('sense-go');
+var gulp = require( 'gulp' );
+var senseGo = require( 'sense-go' );
 
-senseGo.init( gulp, function (  ) {
-	
-});
+senseGo.init( gulp, function () {
+
+} );

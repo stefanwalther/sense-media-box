@@ -75,7 +75,7 @@ define( [], function () {
 				layoutRef: "props.imageFromLib.url",
 				schemaIgnore: true,
 				translation: "Common.Image",
-				tooltip: { select: "Select image", remove: "Remove image" },
+				tooltip: {select: "Select image", remove: "Remove image"},
 				type: "string",
 				component: "media",
 				defaultValue: ""
@@ -157,7 +157,6 @@ define( [], function () {
 			return data.props.mbType === 'imageFromLib' || data.props.mbType === 'image'
 		}
 	};
-	
 
 	// ****************************************************************************************
 	// Html Header
