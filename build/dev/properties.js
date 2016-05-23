@@ -167,7 +167,6 @@ define( [], function () {
 		items: {
 			htmlSource: {
 				type: "string",
-				component: "text",
 				ref: "props.html.source",
 				expression: "optional",
 				defaultValue: '<div style="font-weight:bold;color: darkgreen;">This is the MediaBox</div>'
@@ -243,7 +242,7 @@ define( [], function () {
 			videoSourceYouTube: {
 				type: "string",
 				ref: "props.video.sourceYouTube",
-				label: "Vimeo Id",
+				label: "YouTube Url",
 				expression: "optional",
 				show: function ( data ) {
 					return data.props.video && data.props.video.videoType && data.props.video.videoType === 'video-youtube';

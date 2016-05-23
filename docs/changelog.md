@@ -1,4 +1,4 @@
-### 0.4.0
+### 0.4.x
 
 - Images can now also be selected from the media-library.
 
