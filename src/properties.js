@@ -167,7 +167,6 @@ define( [], function () {
 		items: {
 			htmlSource: {
 				type: "string",
-				component: "text",
 				ref: "props.html.source",
 				expression: "optional",
 				defaultValue: '<div style="font-weight:bold;color: darkgreen;">This is the MediaBox</div>'
@@ -190,29 +189,35 @@ define( [], function () {
 			videoType: {
 				type: "string",
 				ref: "props.video.videoType",
-				//component: "dropdown",
+				component: "dropdown",
 				label: "Video type",
-				//options: [
-				//	{
-				//		value: "video-mp4",
-				//		label: "MP4"
-				//	}
-				//	//,
-				//	//{
-				//	//	value: "vimeo",
-				//	//	label: "Vimeo"
-				//	//}
-				//],
-				defaultValue: "video/mp4",
+				options: [
+					{
+						value: "video-mp4",
+						label: "MP4"
+					},
+					// {
+					// 	value: "vimeo",
+					// 	label: "Vimeo"
+					// },
+					{
+						value: "video-youtube",
+						label: "YouTube"
+					}
+				],
+				defaultValue: "video-mp4",
 				show: function ( data ) {
-					return false;
+					return data.props.video;
 				}
 
 			},
 			videoPoster: {
 				type: "string",
 				ref: "props.video.poster",
-				label: "Video poster image (Url)"
+				label: "Video poster image (Url)",
+				show: function ( data ) {
+					return data.props.video && data.props.video.videoType && data.props.video.videoType === 'video-mp4';
+				}
 			},
 			videoSourceMP4: {
 				type: "string",
@@ -220,11 +225,9 @@ define( [], function () {
 				label: "Video source (Url)",
 				expression: "optional",
 				show: function ( data ) {
-					return true;
-					//console.log( 'data', data );
-					//return data.props.video && data.props.video.videoType && data.props.video.videoType === 'video/mp4';
+					return data.props.video && data.props.video.videoType && data.props.video.videoType === 'video-mp4';
 				}
-			}
+			},
 			//,
 			//videoSourceVimeo: {
 			//	type: "string",
@@ -235,6 +238,17 @@ define( [], function () {
 			//		return data.props.video && data.props.video.videoType && data.props.video.videoType === 'vimeo';
 			//	}
 			//}
+
+			videoSourceYouTube: {
+				type: "string",
+				ref: "props.video.sourceYouTube",
+				label: "YouTube Url",
+				expression: "optional",
+				show: function ( data ) {
+					return data.props.video && data.props.video.videoType && data.props.video.videoType === 'video-youtube';
+				}
+			}
+
 		},
 		show: function ( data ) {
 			return data.props.mbType === 'video';
