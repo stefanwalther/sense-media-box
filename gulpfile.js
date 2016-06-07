@@ -2,6 +2,8 @@
 var gulp = require( 'gulp' );
 var senseGo = require( 'sense-go' );
 
-senseGo.init( gulp, function () {
-
+senseGo.init( gulp, function ( cb ) {
+	if (typeof cb === 'function') {
+		cb();
+	}
 } );

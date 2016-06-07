@@ -2,30 +2,30 @@
   "name": "sense-media-box",
   "version": "0.5.0",
   "description": "Include web pages, videos, images and much more into your Qlik Sense app.",
+  "keywords": [
+    "embedding",
+    "extensions",
+    "images",
+    "qlik",
+    "qlik-sense",
+    "qliksense-visualization-extension",
+    "sense",
+    "videojs",
+    "videos",
+    "visualizations"
+  ],
   "homepage": "https://github.com/stefanwalther/sense-media-box",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "bugs": {
+    "url": "https://github.com/stefanwalther/sense-media-box/issues"
   },
+  "license": "MIT",
+  "author": "Stefan Walther (https://github.com/stefanwalther)",
   "repository": {
     "type": "git",
     "url": "https://github.com/stefanwalther/sense-media-box"
   },
-  "keywords": [
-    "qliksense-visualization-extension",
-    "qlik",
-    "sense",
-    "qlik-sense",
-    "extensions",
-    "visualizations",
-    "videos",
-    "images",
-    "embedding",
-    "videojs"
-  ],
-  "author": "Stefan Walther (https://github.com/stefanwalther)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/stefanwalther/sense-media-box/issues"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
     "gulp": "github:gulpjs/gulp#4.0",
