@@ -33,7 +33,7 @@
   },
   "verb": {
     "toc": true,
-    "layout": "default",
+    "layout": "empty",
     "tasks": [
       "readme"
     ]
