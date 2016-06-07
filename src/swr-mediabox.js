@@ -36,9 +36,10 @@ define( [
 			snapshot: {canTakeSnapshot: true},
 			template: ngTemplate,
 			controller: ['$scope', function ( $scope ) {
-				
-				$scope.getImageUrl = function (  ) {
-					switch ($scope.layout.props.mbType) {
+
+				$scope.getImageUrl = function () {
+
+					switch ( $scope.layout.props.mbType ) {
 						case "image":
 							return $scope.layout.props.image.source;
 							break;
@@ -47,10 +48,8 @@ define( [
 							break;
 						default:
 							return '';
-					}	
+					}
 				};
-				
-				
 			}]
 		};
 

@@ -28,6 +28,7 @@ define( [
 				videoType: '=',
 				videoSourceMp4: '=',
 				videoSourceVimeo: '=',
+				videoSourceYouTube: '=',
 				videoPoster: '='
 			},
 			link: function ( $scope, $element /*, $attrs */ ) {
@@ -56,9 +57,12 @@ define( [
 						case 'video/mp4':
 							return ["html5"];
 							break;
-						//case 'vimeo':
-						//	return ["vimeo"];
-						//	break;
+						case 'vimeo':
+							return ["vimeo"];
+							break;
+						case 'youtube':
+							return ['youtube'];
+							break;
 						default:
 							return ["html5"];
 							break;
