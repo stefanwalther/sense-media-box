@@ -38,5 +38,5 @@ import:
     - ["node_modules/video.js/dist/font/VideoJS.svg", "./.tmp/lib/directives/qsMbVideo/font/"]
     - ["node_modules/video.js/dist/font/VideoJS.ttf", "./.tmp/lib/directives/qsMbVideo/font/"]
     - ["node_modules/video.js/dist/font/VideoJS.woff", "./.tmp/lib/directives/qsMbVideo/font/"]
-    - ["node_modules/videojs-youtube/dist/YouTube.min.js", "./.tmp/lib/directives/qsMbVideo/plugins/"]
+    - ["node_modules/videojs-youtube/dist/YouTube.js", "./.tmp/lib/directives/qsMbVideo/plugins/"]
     - ["node_modules/videojs-vimeo/src/Vimeo.js", "./.tmp/lib/directives/qsMbVideo/plugins/"]

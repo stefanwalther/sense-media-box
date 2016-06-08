@@ -15,7 +15,7 @@ define( [
 		'./properties',
 		'./initialproperties',
 		'./lib/js/extUtils',
-		'text!./lib/partials/qsMediaBox.ng.html',
+		'text!./swr-mediabox.ng.html',
 		'text!./lib/css/main.css',
 
 		//no return values

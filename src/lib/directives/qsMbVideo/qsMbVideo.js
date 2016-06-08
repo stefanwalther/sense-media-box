@@ -6,17 +6,12 @@ define( [
 		'text!./video-js.min.css',
 
 		//no return value
-		'./videojs.min',
-		// './plugins/Youtube.min',
-		// './plugins/Vimeo'
+		'./videojs.min'
 
 	], function ( qvangular,
 				  extUtils,
 				  ngTemplate,
-				  videojsCss,
-				  videojs,
-				  pluginYouTube,
-				  pluginVimeo ) {
+				  videojsCss ) {
 		'use strict';
 
 		qvangular.directive( 'qsMbVideo', function () {
@@ -40,8 +35,6 @@ define( [
 
 					function getSource () {
 
-						return $scope.videoSourceMp4;
-
 						switch ( $scope.videoType ) {
 							case 'video/mp4':
 								return $scope.videoSourceMp4;
@@ -59,6 +52,7 @@ define( [
 					}
 
 					function getTechOrder () {
+						console.log( 'getTechOrder', $scope.videoType );
 						switch ( $scope.videoType ) {
 							case 'video/mp4':
 								return ["html5"];
@@ -77,21 +71,19 @@ define( [
 
 					function configVideo () {
 
-						var options = {
-							techOrder: getTechOrder(),
-							controls: true,
-							autoplay: false,
-							preload: 'auto',
-							poster: $scope.videoPoster
-						};
+						require(['extensions/swr-mediabox/lib/directives/qsMbVideo/plugins/YouTube'], function ( pluginYouTube ) {
+							var options = {
+								techOrder: getTechOrder(),
+								controls: true,
+								autoplay: false,
+								preload: 'auto',
+								poster: $scope.videoPoster
+							};
 
-						var videoSource = getSource();
-
-						if ( videoSource ) {
 							if ( !player ) {
 
 								videojs.plugin( 'youtube', pluginYouTube );
-								videojs.plugin( 'vimeo', pluginVimeo );
+								// videojs.plugin( 'Vimeo', pluginVimeo );
 
 								// Initialization
 								player = videojs( $element.find( 'video' )[0], options, function () {
@@ -112,7 +104,7 @@ define( [
 									src: getSource()
 								} );
 							}
-						}
+						});
 
 					}
 
@@ -123,9 +115,9 @@ define( [
 					} );
 
 					$scope.$watchCollection( '[videoType, videoSourceMP4, videoSourceVimeo, videoSourceYouTube]', function ( newVal, oldVal ) {
-						if ( newVal !== oldVal ) {
-							configVideo();
-						}
+						//if ( newVal !== oldVal ) {
+						configVideo();
+						//}
 					} );
 
 				}
@@ -134,5 +126,4 @@ define( [
 		} );
 
 	}
-)
-;
+);

@@ -3,12 +3,19 @@
 <head>
 	<meta charset="UTF-8">
 	<title>videojs - Samples</title>
+	<link href="../../node_modules/video.js/dist/video-js.min.css" rel="stylesheet">
 </head>
 <body>
 
+<video id="my-video" class="video-js" controls preload="auto" width="640" height="264"
+	   poster="http://vjs.zencdn.net/v/oceans.png" data-setup="{}">
+	<source src="http://vjs.zencdn.net/v/oceans.mp4" type='video/mp4'>
+	<p class="vjs-no-js">
+		To view this video please enable JavaScript, and consider upgrading to a web browser that
+		<a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+	</p>
+</video>
 
-
-
-
+<script src="../../node_modules/video.js/dist/video.min.js"></script>
 </body>
 </html>
