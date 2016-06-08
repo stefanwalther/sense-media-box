@@ -11,7 +11,9 @@
     "qlik",
     "qlik-sense",
     "sense",
-    "extensions"
+    "extensions",
+    "vimeo",
+    "youtube"
   ],
   "license": "MIT",
   "homepage": "https://github.com/stefanwalther/qsMediaBox",
@@ -23,8 +25,6 @@
     "tests"
   ],
   "devDependencies": {
-    "video.js": "^5.10.2",
-    "videojs-youtube": "^2.0.8",
-    "videojs-vimeo": "^2.0.0"
+    "video.js": "^5.10.2"
   }
 }

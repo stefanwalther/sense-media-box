@@ -23,6 +23,7 @@ define( [
 		'./lib/directives/qsMbVideo/qsMbVideo',
 		'./lib/directives/qsMbWebsite/qsMbWebsite',
 		'./lib/directives/qsMbHtml/qsMbHtml'
+		
 	],
 	function ( $, _, angular, props, initProps, extensionUtils, ngTemplate, cssContent ) {
 		'use strict';
@@ -36,9 +37,10 @@ define( [
 			snapshot: {canTakeSnapshot: true},
 			template: ngTemplate,
 			controller: ['$scope', function ( $scope ) {
-				
-				$scope.getImageUrl = function (  ) {
-					switch ($scope.layout.props.mbType) {
+
+				$scope.getImageUrl = function () {
+
+					switch ( $scope.layout.props.mbType ) {
 						case "image":
 							return $scope.layout.props.image.source;
 							break;
@@ -47,10 +49,8 @@ define( [
 							break;
 						default:
 							return '';
-					}	
+					}
 				};
-				
-				
 			}]
 		};
 

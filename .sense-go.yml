@@ -28,3 +28,15 @@ deployment:
     username: "stefanwalther"
     password: "Test1234"
     dest: "/cygdrive/c/Users/stefanwalther/Documents/Qlik/Sense/Extensions/sense-media-box"
+import:
+  files:
+    - ["node_modules/video.js/dist/video.min.js","./.tmp/lib/directives/qsMbVideo/"]
+    - ["node_modules/video.js/dist/video.min.js.map","./.tmp/lib/directives/qsMbVideo/"]
+    - ["node_modules/video.js/dist/video-js.min.css","./.tmp/lib/directives/qsMbVideo/"]
+    - ["node_modules/video.js/dist/video-js.swf","./.tmp/lib/directives/qsMbVideo/"]
+    - ["node_modules/video.js/dist/font/VideoJS.eot", "./.tmp/lib/directives/qsMbVideo/font/"]
+    - ["node_modules/video.js/dist/font/VideoJS.svg", "./.tmp/lib/directives/qsMbVideo/font/"]
+    - ["node_modules/video.js/dist/font/VideoJS.ttf", "./.tmp/lib/directives/qsMbVideo/font/"]
+    - ["node_modules/video.js/dist/font/VideoJS.woff", "./.tmp/lib/directives/qsMbVideo/font/"]
+    - ["node_modules/videojs-youtube/dist/YouTube.min.js", "./.tmp/lib/directives/qsMbVideo/plugins/"]
+    - ["node_modules/videojs-vimeo/src/Vimeo.js", "./.tmp/lib/directives/qsMbVideo/plugins/"]

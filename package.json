@@ -10,9 +10,12 @@
     "qlik-sense",
     "qliksense-visualization-extension",
     "sense",
+    "video",
     "videojs",
     "videos",
-    "visualizations"
+    "vimeo",
+    "visualizations",
+    "youtube"
   ],
   "homepage": "https://github.com/stefanwalther/sense-media-box",
   "bugs": {
@@ -27,9 +30,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "dependencies": {},
   "devDependencies": {
     "gulp": "github:gulpjs/gulp#4.0",
-    "sense-go": "github:stefanwalther/sense-go#0.6"
+    "sense-go": "github:stefanwalther/sense-go#0.6",
+    "video.js": "^5.10.4",
+    "videojs-vimeo": "github:stefanwalther/videojs-vimeo",
+    "videojs-youtube": "github:stefanwalther/videojs-youtube"
   },
   "verb": {
     "toc": true,

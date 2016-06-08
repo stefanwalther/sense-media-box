@@ -1,6 +1,6 @@
 <div qv-extension>
 <qs-mb-website ng-if="layout.props.mbType === 'website'" edit-mode="$parent.$parent.$parent.editmode" object-id="layout.qInfo.qId" website-source="layout.props.website.source" website-interaction="layout.props.website.interaction" website-scroll-behavior="layout.props.website.scrollBehavior"></qs-mb-website>
-<qs-mb-video ng-if="layout.props.mbType === 'video'" edit-mode="$parent.$parent.$parent.editmode" object-id="layout.qInfo.qId" video-type="layout.props.video.videoType" video-poster="layout.props.video.poster" video-source-mp4="layout.props.video.sourceMP4" video-source-vimeo="layout.props.video.sourceVimeo"></qs-mb-video>
+<qs-mb-video ng-if="layout.props.mbType === 'video'" edit-mode="$parent.$parent.$parent.editmode" object-id="layout.qInfo.qId" video-type="layout.props.video.videoType" video-poster="layout.props.video.poster" video-source-mp4="layout.props.video.sourceMP4" video-source-vimeo="layout.props.video.sourceVimeo" video-source-youtube="layout.props.video.sourceYouTube"></qs-mb-video>
 <qs-mb-image ng-if="layout.props.mbType === 'image' || layout.props.mbType === 'imageFromLib'" img="getImageUrl()" vertical-align="layout.props.image.verticalAlign" horizontal-align="layout.props.image.horizontalAlign" image-aspect-ratio="layout.props.image.imageAspectRatio"></qs-mb-image>
 <qs-mb-html ng-if="layout.props.mbType === 'html'"></qs-mb-html>
 </div>

@@ -1,0 +1,5 @@
+The following file will be copied into this folder during deployment:
+
+	VideoJS.eot
+
+See .sense-go.yml for further configuration.

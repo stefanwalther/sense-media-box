@@ -1,0 +1,6 @@
+
+The following file will be copied into this folder during deployment:
+
+	VideoJS.woff
+
+See .sense-go.yml for further configuration.

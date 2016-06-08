@@ -23,6 +23,7 @@ define( [
 		'./lib/directives/qsMbVideo/qsMbVideo',
 		'./lib/directives/qsMbWebsite/qsMbWebsite',
 		'./lib/directives/qsMbHtml/qsMbHtml'
+		
 	],
 	function ( $, _, angular, props, initProps, extensionUtils, ngTemplate, cssContent ) {
 		'use strict';
