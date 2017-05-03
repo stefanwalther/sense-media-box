@@ -1,5 +1,7 @@
 # Media Box for Qlik Sense
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/stefanwalther/sense-media-box.svg)](https://greenkeeper.io/)
+
 > Include web pages, videos, images and much more into your Qlik Sense app.
 
 ***
