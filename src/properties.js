@@ -195,15 +195,16 @@ define( [], function () {
 					{
 						value: "video-mp4",
 						label: "MP4"
-					},
+					}
+					// ,
 					// {
 					// 	value: "vimeo",
 					// 	label: "Vimeo"
 					// },
-					{
-						value: "video-youtube",
-						label: "YouTube"
-					}
+					// {
+					// 	value: "video-youtube",
+					// 	label: "YouTube"
+					// }
 				],
 				defaultValue: "video-mp4",
 				show: function ( data ) {

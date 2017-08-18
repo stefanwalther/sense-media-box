@@ -1,3 +1,13 @@
+/*!
+
+* sense-media-box - Include web pages, videos, images and much more into your Qlik Sense app.
+* --
+* @version v0.4.2
+* @link https://github.com/stefanwalther/sense-media-box
+* @author Stefan Walther
+* @license MIT
+*/
+
 /*global define*/
 define( [
 	'jquery',
@@ -16,6 +26,7 @@ define( [
 			restrict: "E",
 			template: ngTemplate,
 			scope: {
+
 				/**
 				 * Id of the parent object to be inherited by the website object
 				 */
@@ -43,11 +54,11 @@ define( [
 				editMode: '='
 			},
 			controller: ['$scope', function ( $scope ) {
-
 				$scope.trustedSource = '';
 			}],
 			link: function ( $scope, $element, $attrs ) {
 
+				// console.log('link it');
 				var $ifr = $element.find( 'iframe' );
 
 				// Todo: Can be replaced with $watchGroup as soon as AngularJS 1.3 is in place
@@ -88,7 +99,7 @@ define( [
 
 					$scope.showOverlay = !$scope.websiteInteraction;
 
-					if ( $scope.editMode == true ) {
+					if ( $scope.editMode === true ) {
 						$scope.showOverlay = true;
 					}
 
@@ -102,12 +113,15 @@ define( [
 					$ifr.attr( 'src', $scope.trustedSource );
 					$ifr.attr( 'frameborder', 0 );
 					$ifr.attr( 'scrolling', $scope.iframeScrolling );
+
 					// see http://www.w3schools.com/tags/att_iframe_sandbox.asp
 					$ifr.attr( 'sandbox', 'allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation' );
 					$ifr.addClass( 'mb_website' );
 					$ifrPlaceHolder.append( $ifr );
 				};
 
+				// https://stackoverflow.com/questions/31622673/angularjs-watch-window-resize-inside-directive
+				// console.log('OK, render it ...');
 				render();
 
 			}

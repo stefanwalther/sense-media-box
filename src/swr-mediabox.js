@@ -22,7 +22,8 @@ define( [
 		'./lib/directives/qsMbImage/qsMbImage',
 		'./lib/directives/qsMbVideo/qsMbVideo',
 		'./lib/directives/qsMbWebsite/qsMbWebsite',
-		'./lib/directives/qsMbHtml/qsMbHtml'
+		'./lib/directives/qsMbHtml/qsMbHtml',
+		'./lib/directives/resize/resize'
 	],
 	function ( $, _, angular, props, initProps, extensionUtils, ngTemplate, cssContent ) {
 		'use strict';
@@ -33,7 +34,9 @@ define( [
 
 			definition: props,
 			initialProperties: initProps,
-			snapshot: {canTakeSnapshot: true},
+			snapshot: {
+				canTakeSnapshot: true
+			},
 			template: ngTemplate,
 			controller: ['$scope', function ( $scope ) {
 				
@@ -49,8 +52,9 @@ define( [
 							return '';
 					}	
 				};
-				
-				
+
+
+
 			}]
 		};
 

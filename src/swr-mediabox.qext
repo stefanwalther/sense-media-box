@@ -1,6 +1,6 @@
 {
 	"name" : "Media Box",
-	"description" : "Include web pages, videos, images and much more into your Qlik Sense app.",
+	"description" : "Include web pages, videos, images and much more into your Qlik Sense app.<br/><br/>(Version: @@pkg.version)",
 	"icon" : "extension",
 	"type" : "visualization",
 	"version": "@@pkg.version",

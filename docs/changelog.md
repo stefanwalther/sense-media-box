@@ -5,3 +5,5 @@
 ### 0.3.0
 
 - Added horizontal & vertical alignment of images + aspect ratio
+
+For a detailed change log, please have a look into [CHANGELOG.md](CHANGELOG.md)
