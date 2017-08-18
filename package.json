@@ -29,5 +29,26 @@
     "url": "https://github.com/stefanwalther/sense-media-box/issues"
   },
   "homepage": "https://github.com/stefanwalther/sense-media-box",
-  "devDependencies": {}
+  "devDependencies": {},
+  "verb": {
+    "run": true,
+    "toc": true,
+    "layout": "empty",
+    "tasks": [
+      "readme"
+    ],
+    "plugins": [
+      "gulp-format-md"
+    ],
+    "related": {
+      "list": []
+    },
+    "lint": {
+      "reflinks": true
+    },
+    "reflinks": [
+      "verb",
+      "verb-readme-generator"
+    ]
+  }
 }
