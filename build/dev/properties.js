@@ -1,3 +1,13 @@
+/*!
+
+* sense-media-box - Include web pages, videos, images and much more into your Qlik Sense app.
+* --
+* @version v0.4.2
+* @link https://github.com/stefanwalther/sense-media-box
+* @author Stefan Walther
+* @license MIT
+*/
+
 /*global define*/
 define( [], function () {
 	'use strict';
@@ -195,15 +205,16 @@ define( [], function () {
 					{
 						value: "video-mp4",
 						label: "MP4"
-					},
+					}
+					// ,
 					// {
 					// 	value: "vimeo",
 					// 	label: "Vimeo"
 					// },
-					{
-						value: "video-youtube",
-						label: "YouTube"
-					}
+					// {
+					// 	value: "video-youtube",
+					// 	label: "YouTube"
+					// }
 				],
 				defaultValue: "video-mp4",
 				show: function ( data ) {

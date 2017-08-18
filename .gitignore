@@ -9,7 +9,9 @@ web.*.config
 /**/bower_components/
 /build/*_dev.zip
 /**/.tmp/
-
+.sense-go.local.yml
+docker-compose.yml
+/example/Search
 
 # =========================
 # Visual Studio

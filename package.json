@@ -1,10 +1,11 @@
 {
   "name": "sense-media-box",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "Include web pages, videos, images and much more into your Qlik Sense app.",
   "main": "-",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs": "docker run --rm -v ${PWD}:/opt/verb stefanwalther/verb"
   },
   "repository": {
     "type": "git",
@@ -28,9 +29,26 @@
     "url": "https://github.com/stefanwalther/sense-media-box/issues"
   },
   "homepage": "https://github.com/stefanwalther/sense-media-box",
-  "devDependencies": {
-    "gulp": "github:gulpjs/gulp#4.0",
-    "sense-go": "github:stefanwalther/sense-go#0.6",
-    "verb": "git://github.com/verbose/verb"
+  "devDependencies": {},
+  "verb": {
+    "run": true,
+    "toc": true,
+    "layout": "empty",
+    "tasks": [
+      "readme"
+    ],
+    "plugins": [
+      "gulp-format-md"
+    ],
+    "related": {
+      "list": []
+    },
+    "lint": {
+      "reflinks": true
+    },
+    "reflinks": [
+      "verb",
+      "verb-readme-generator"
+    ]
   }
 }

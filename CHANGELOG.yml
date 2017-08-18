@@ -1,43 +1,47 @@
+v0.4.2:
+  date: "2017-08-17"
+  changes:
+    - "Fix a positioning problem"
+    - "Start using docker-verb to generate the docs"
 v0.4.1:
   date: "2016-05-23"
-  fixes:
+  changes:
     - "Fix broken Html property input"
 v0.4.0:
   date: "2016-05-21"
-  new:
+  changes:
     - "Images can now also be selected from the media-library."
 v0.3.0:
   date: "2016-05-20"
-  enhancements:
+  changes:
     - "Added horizontal & vertical alignment of images + aspect ratio"
 v0.2.2:
   date: "2015-08-02"
-  enhancements:
+  changes:
     - "Fix badge link for README.md"
 v0.2.1:
   date: "2015-07-06"
-  enhancements:
-    - Changed name to sense-media-box
+  changes:
+    - "Changed name to sense-media-box"
 v0.2.0:
   date: "2015-05-20"
-  fixes:
-    - Fixed for Qlik Sense 1.1
+  changes:
+    - "Fixed for Qlik Sense 1.1"
 v0.1.9:
   date: "2015-04-06"
-  enhancements: 
-    - Added MediaBox type "HTML"
+  changes:
+    - "Added MediaBox type 'HTML'"
 v0.0.3:
   date: "2015-03-30"
-  enhancements:
-    - MP4 based videos didn't work correctly (property text box for defining the Video URL was not shown)
+  changes:
+    - "MP4 based videos didn't work correctly (property text box for defining the Video URL was not shown)"
 v0.0.2:
   date: "2015-02-22"
-  fixes:
-    - Style of video didn't render correctly in release mode and therefore the final release
-  enhancements:
-    -Reduce file size for all files in release
+  changes:
+    - "Style of video didn't render correctly in release mode and therefore the final release"
+    - "Reduce file size for all files in release"
 v0.0.1:
   date: "2015-02-22"
-  new: 
-    - Initial Commit
-    - Basic template and build system created using the Yeoman Generator for Qlik Sense Extensions (https://github.com/stefanwalther/generator-qsExtension)
+  changes:
+    - "Initial Commit"
+    - "Basic template and build system created using the Yeoman Generator for Qlik Sense Extensions (https://github.com/stefanwalther/generator-qsExtension)"
