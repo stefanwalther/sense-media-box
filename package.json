@@ -1,8 +1,7 @@
 {
   "name": "sense-media-box",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "Include web pages, videos, images and much more into your Qlik Sense app.",
-  "main": "-",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "docs": "docker run --rm -v ${PWD}:/opt/verb stefanwalther/verb"
