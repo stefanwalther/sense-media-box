@@ -4,7 +4,8 @@
   "description": "Include web pages, videos, images and much more into your Qlik Sense app.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "docs": "docker run --rm -v ${PWD}:/opt/verb stefanwalther/verb"
+    "docs": "docker run --rm -v ${PWD}:/opt/verb stefanwalther/verb",
+    ""
   },
   "repository": {
     "type": "git",
@@ -28,7 +29,21 @@
     "url": "https://github.com/stefanwalther/sense-media-box/issues"
   },
   "homepage": "https://github.com/stefanwalther/sense-media-box",
-  "devDependencies": {},
+  "devDependencies": {
+    "after-work.js": "github:qlik-oss/after-work.js",
+    "eslint": "^4.15.0",
+    "eslint-config-space-single": "^0.3.1",
+    "extend": "^3.0.1",
+    "font-awesome": "^4.7.0",
+    "lodash": "^4.17.4",
+    "protractor": "^5.2.2",
+    "protractor-console": "^3.0.0",
+    "protractor-console-plugin": "^0.1.1",
+    "video.js": "^6.6.0",
+    "videojs-vimeo": "^2.0.2",
+    "videojs-youtube": "^2.4.1",
+    "webdriver-manager": "^12.0.6"
+  },
   "verb": {
     "run": true,
     "toc": true,
