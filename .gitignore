@@ -1,6 +1,9 @@
 # Project specific
 
-/node_modules
+node_modules/
+bower_components/
+build/dev/
+build/release/
 docker-compose.yml
 .sense-go.local.yml
 
