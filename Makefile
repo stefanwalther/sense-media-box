@@ -17,13 +17,27 @@ release: 			## Build the extensions (release build)
 	npm run release
 .PHONY: release
 
-run-dev: build 		## Run the local development environment
+run-build: build 		## Run the local development environment (build)
 	export ENV=dev && \
-	docker-compose --f=./docker-compose.dev.yml up -d --build
+	export DOCKER_COMPOSE=docker-compose.yml && \
+	docker-compose --f=./docker-compose.yml down && \
+	docker-compose --f=./docker-compose.yml up -d --build
 	@echo ""
-	@echo "Open http://localhost:9076/sense/app/sense-navigation.qvf"
+	@echo "Open http://localhost:4848/sense/app/sense-navigation.qvf"
 	# We might use: python -mwebbrowser http://example.com
-.PHONY: run-dev
+.PHONY: run-build
+
+run-release: release 		## Run the local development environment
+	export ENV=release && \
+	export DOCKER_COMPOSE=docker-compose.yml && \
+	docker-compose --f=./docker-compose.yml down && \
+	docker-compose --f=./docker-compose.yml up -d --build
+	@echo ""
+	@echo "Open http://localhost:4848/sense/app/sense-navigation.qvf"
+	# We might use: python -mwebbrowser http://example.com
+.PHONY: run-release
+
+
 
 test-release:	## Test release build
 	npm run release && \
