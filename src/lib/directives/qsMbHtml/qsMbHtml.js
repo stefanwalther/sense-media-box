@@ -1,38 +1,50 @@
 /*global define*/
-define( [
-		'underscore',
-		'qvangular'
-	], function ( _,
-				  qvangular ) {
-		'use strict';
+define([
+    'qvangular',
+    'text!./qsMbHtml.ng.html'
+  ], function (qvangular, ngTemplate) {
+    'use strict';
 
-		qvangular.directive( 'qsMbHtml', function () {
+    qvangular.directive('qsMbHtml', function () {
 
-			return {
-				restrict: "E",
-				link: function ( $scope, $element, $attrs ) {
+      return {
+        restrict: "E",
+        scope: {
+          htmlSource: '=',
+          htmlScrollBehavior: '='
+        },
+        template: ngTemplate,
+        controller: ['$scope', function ( $scope ) {
 
-					var $htmlContainer = $( document.createElement( 'div' ) );
+          $scope.setScrollingClass = function() {
+            var ret = null;
+            switch ($scope.htmlScrollBehavior) {
+              case 'auto':
+                ret= 'scrolling-auto';
+                break;
+              case 'always':
+                ret = 'scrolling-always';
+                break;
+              case 'none':
+                ret = 'scrolling-none';
+                break;
+              default:
+                ret = 'scrolling-auto';
+            }
+            $scope.scrolling = ret;
+          };
+          $scope.setScrollingClass();
 
-					var render = function () {
-						if ( $scope.layout.props.html && $scope.layout.props.html.source ) {
-							$htmlContainer.html( $scope.layout.props.html.source );
-						}
-					};
-					render();
+        }],
+        link: function ( $scope ) {
 
-					$scope.$watch( 'layout.props.html.source', function ( newVal, oldVal ) {
-						if ( newVal ) {
-							render();
-						}
-					} );
-
-					$element.append( $htmlContainer );
-
-				}
-			}
-
-		} );
-
-	}
+          $scope.$watchCollection( '[htmlScrollBehavior]', function ( newVal, oldVal ) {
+            if ( newVal && newVal !== oldVal ) {
+              $scope.setScrollingClass();
+            }
+          } );
+        }
+      }
+    });
+  }
 );

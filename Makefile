@@ -20,8 +20,8 @@ release: 			## Build the extensions (release build)
 run-build: build 		## Run the local development environment (build)
 	export ENV=dev && \
 	export DOCKER_COMPOSE=docker-compose.yml && \
-	docker-compose --f=./docker-compose.yml down && \
-	docker-compose --f=./docker-compose.yml up -d --build
+	docker-compose down --timeout=0  && \
+	docker-compose up -d --build
 	@echo ""
 	@echo "Open http://localhost:4848/sense/app/sense-navigation.qvf"
 	# We might use: python -mwebbrowser http://example.com
@@ -30,25 +30,25 @@ run-build: build 		## Run the local development environment (build)
 run-release: release 		## Run the local development environment
 	export ENV=release && \
 	export DOCKER_COMPOSE=docker-compose.yml && \
-	docker-compose --f=./docker-compose.yml down && \
+	docker-compose --f=./docker-compose.yml down --timeout=0  && \
 	docker-compose --f=./docker-compose.yml up -d --build
 	@echo ""
-	@echo "Open http://localhost:4848/sense/app/sense-navigation.qvf"
+	@echo "Open http://localhost:4848/sense/app/sense-media-box.qvf"
 	# We might use: python -mwebbrowser http://example.com
 .PHONY: run-release
 
 
 
-test-release:	## Test release build
-	npm run release && \
-	export ENV=release && \
-	npm run dc-rs && \
-	npm run test:e2e
-.PHONY: test-release
-
-test-dev:			## Test dev build
-	npm run release && \
-	export ENV=dev && \
-	npm run dc-rs && \
-	npm run test:e2e
-.PHONY: test-dev
+#test-release:	## Test release build
+#	npm run release && \
+#	export ENV=release && \
+#	npm run dc-rs && \
+#	npm run test:e2e
+#.PHONY: test-release
+#
+#test-dev:			## Test dev build
+#	npm run release && \
+#	export ENV=dev && \
+#	npm run dc-rs && \
+#	npm run test:e2e
+#.PHONY: test-dev
