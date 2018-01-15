@@ -1,6 +1,6 @@
 {
   "name": "sense-media-box",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "description": "Include web pages, videos, images and much more into your Qlik Sense app.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -40,7 +40,7 @@
     "protractor": "^5.2.2",
     "protractor-console": "^3.0.0",
     "protractor-console-plugin": "^0.1.1",
-    "video.js": "^6.6.0",
+    "video.js": "^4.11.4",
     "videojs-vimeo": "^2.0.2",
     "videojs-youtube": "^2.4.1",
     "webdriver-manager": "^12.0.6"
