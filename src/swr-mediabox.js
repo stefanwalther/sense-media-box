@@ -8,54 +8,50 @@
 /*jslint    devel:true,
  white: true
  */
-define( [
-		'jquery',
-		'underscore',
-		'angular',
-		'./properties',
-		'./initialproperties',
-		'./lib/js/extUtils',
-		'text!./lib/partials/qsMediaBox.ng.html',
-		'text!./lib/css/main.css',
+define([
+    'jquery',
+    'underscore',
+    'angular',
+    './properties',
+    './initialproperties',
+    './lib/js/extUtils',
+    'text!./lib/partials/qsMediaBox.ng.html',
+    'text!./lib/css/main.css',
 
-		//no return values
-		'./lib/directives/qsMbImage/qsMbImage',
-		'./lib/directives/qsMbVideo/qsMbVideo',
-		'./lib/directives/qsMbWebsite/qsMbWebsite',
-		'./lib/directives/qsMbHtml/qsMbHtml',
-		'./lib/directives/resize/resize'
-	],
-	function ( $, _, angular, props, initProps, extensionUtils, ngTemplate, cssContent ) {
-		'use strict';
+    //no return values
+    './lib/directives/qsMbImage/qsMbImage',
+    './lib/directives/qsMbVideo/qsMbVideo',
+    './lib/directives/qsMbWebsite/qsMbWebsite',
+    './lib/directives/qsMbHtml/qsMbHtml',
+    './lib/directives/resize/resize'
+  ],
+  function ($, _, angular, props, initProps, extensionUtils, ngTemplate, cssContent) {
+    'use strict';
 
-		extensionUtils.addStyleToHeader( cssContent );
+    extensionUtils.addStyleToHeader(cssContent);
 
-		return {
+    return {
 
-			definition: props,
-			initialProperties: initProps,
-			snapshot: {
-				canTakeSnapshot: true
-			},
-			template: ngTemplate,
-			controller: ['$scope', function ( $scope ) {
-				
-				$scope.getImageUrl = function (  ) {
-					switch ($scope.layout.props.mbType) {
-						case "image":
-							return $scope.layout.props.image.source;
-							break;
-						case "imageFromLib":
-							return $scope.layout.props.imageFromLib.url;
-							break;
-						default:
-							return '';
-					}	
-				};
+      definition: props,
+      initialProperties: initProps,
+      snapshot: {
+        canTakeSnapshot: true
+      },
+      template: ngTemplate,
+      controller: [
+        '$scope', function ($scope) {
 
-
-
-			}]
-		};
-
-	} );
+          $scope.getImageUrl = function () {
+            switch ($scope.layout.props.mbType) {
+              case "image":
+                return $scope.layout.props.image.source;
+              case "imageFromLib":
+                return $scope.layout.props.imageFromLib.url;
+              default:
+                return '';
+            }
+          };
+        }
+      ]
+    };
+  });

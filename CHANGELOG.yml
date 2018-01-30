@@ -1,3 +1,9 @@
+v0.4.5:
+  date: "2018-01-14"
+  added:
+    - "Support for scrollbars in case of media-type Html (fixes #21)"
+  changes:
+    - "General layout settings (title, etc.) are disabled by default"
 v0.4.4:
   date: "2018-01-14"
   changes:
