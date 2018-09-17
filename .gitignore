@@ -1,5 +1,6 @@
 # Project specific
 
+.tmp
 node_modules/
 bower_components/
 build/dev/
